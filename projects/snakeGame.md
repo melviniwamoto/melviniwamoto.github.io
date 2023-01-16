@@ -5,53 +5,23 @@ image: img/snake/snake-header.jpg
 title: "Snake: Nokia nostalgia"
 date: 2013
 published: false
-labels:
-  - Lisp
-  - GitHub
 summary: "The final project for EE160, written in C in 2013."
 ---
 
 <img class="img-fluid" src="../img/snake/snake-header.jpg">
 
-Cotton is a horror-esque text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+As mass production flooded the market with newly affordable mobile phones, not only with regard to the hardware but with the contracts for service as well, aquiring these phones became much more practical and prevalent for "middle-class" families.  In some cases, as time progressed in these market conditions, even children and young adults were gaining personal access and ownership of these devices.  The game "Snake" came pre-installed onto Nokia phones and it is by this way that I was introduced to the game.
 
-To give you a flavor of the game, here is an excerpt from one run:
+The game is a simple untimed game that is played on a grid.  On that grid is a snake, represented by a head with a direction on one space and the rest of the body and tail on trailing spaces which grows in length as the snake collects tokens, presumably representing mice.  The snake moves on its own and the player must direct the snake in such a way that it never crosses its own body, which causes the game to end, providing an increasing difficulty level as the game progresses.  The snake is also programmed to begin to move faster as it grows, thereby compounding the increasing difficulty.  The game is technically winnable with a maximum possible score if you can fill the entire grid play-area with your body.  Eventually the game was made to support a high-score list and was ultimately given a sequel-game with improved graphical representation of the grid, the tokens, and the snake.
 
 <hr>
 
 <pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
 
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
+In 2013, I was pursuing a degree in Civil Engineering and I ended up enrolling in the course Electrical Engineering 160 to fulfil a requirement for the Associates degree in Science offered from the University of Hawaii (UH): Kapi'olani Community College's (KCC's) STEM program.  This was the first time I had ever interacted with computer science or programming and it sparked great interest in me despite having to learn the command-line UNIX system that UH uses and the infuriatingly hard-to-use text editting program Visual Editor Improved (VIM).
 
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
+As part of the final grade for that course we were required to write a Game Design Document (GDD) and implement the game from C Language.
 
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
 </pre>
 
 <hr>
