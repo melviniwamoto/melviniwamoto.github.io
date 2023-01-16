@@ -21,13 +21,9 @@ The game is a simple untimed game that is played on a grid.  On that grid is a s
 
 <hr>
 
-<pre>
-
 In 2013, I was pursuing a degree in Civil Engineering and I ended up enrolling in the course Electrical Engineering 160 to fulfil a requirement for the Associates degree in Science offered from the University of Hawaii (UH): Kapi'olani Community College's (KCC's) STEM program.  This was the first time I had ever interacted with computer science or programming and it sparked great interest in me despite having to learn the command-line UNIX system that UH uses and the infuriatingly hard-to-use text editting program Visual Editor Improved (VIM).
 
 As part of the final grade for that course we were required to write a Game Design Document (GDD) and implement the game from C Language.
-
-</pre>
 
 <hr>
 
