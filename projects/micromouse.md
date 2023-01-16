@@ -4,7 +4,7 @@ type: project
 image: img/micromouse/micromouse-square.jpg
 title: "Micromouse"
 date: 2015
-published: flase
+published: false
 labels:
   - Robotics
   - Arduino
