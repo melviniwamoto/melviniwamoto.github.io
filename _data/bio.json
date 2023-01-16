@@ -11,7 +11,7 @@
     "profiles": [
       { "network": "github", "username": "melviniwamoto", "url": "http://github.com/melviniwamoto" },
       { "network": "linkedin", "username": "Melvin Iwamoto", "url": "https://www.linkedin.com/in/melvin-iwamoto-6a750ab8/" },
-      { "network": "email", "username": "melvinti@hawaii.edu }
+      { "network": "email", "username": "melvinti@hawaii.edu" }
     ]
   },
   "interests": [
