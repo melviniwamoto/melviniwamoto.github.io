@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/snake/snakeGame.jpg
+image: img/snake/snake-header.jpg
 title: "Snake: Nokia nostalgia"
 date: 2013
 published: false
@@ -11,7 +11,7 @@ labels:
 summary: "The final project for EE160, written in C in 2013."
 ---
 
-<img class="img-fluid" src="../img/snake/snakeGame.jpg">
+<img class="img-fluid" src="../img/snake/snake-header.jpg">
 
 Cotton is a horror-esque text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
 
