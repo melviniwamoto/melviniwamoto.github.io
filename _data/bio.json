@@ -6,11 +6,12 @@
     "email": "melvinti@hawaii.edu",
     "phone": "808-343-1116",
     "website": "https://melviniwamoto.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate some time before the world ends.",
+    "summary": "I am a part-time student studying for a B.S. in Computer Science from the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate around 2025.",
     "location": { "address": "1126 f 19th ave", "postalCode": "96816", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "melviniwamoto", "url": "http://github.com/melviniwamoto" },
-      { "network": "linkedin", "username": "Melvin Iwamoto", "url": "https://www.linkedin.com/in/melvin-iwamoto-6a750ab8/" }
+      { "network": "linkedin", "username": "Melvin Iwamoto", "url": "https://www.linkedin.com/in/melvin-iwamoto-6a750ab8/" },
+      { "network": "email", "username": "melvinti@hawaii.edu }
     ]
   },
   "interests": [
