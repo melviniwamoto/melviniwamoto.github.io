@@ -4,7 +4,7 @@ type: project
 image: img/snake/snake-header.jpg
 title: "Snake: Nokia nostalgia"
 date: 2013
-published: false
+published: true
 summary: "The final project for EE160, written in C in 2013."
 ---
 
