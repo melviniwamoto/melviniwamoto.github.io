@@ -5,6 +5,11 @@ image: img/snake/snake-header.jpg
 title: "Snake: Nokia nostalgia"
 date: 2013
 published: true
+labels:
+  - C-Language
+  - UNIX
+  - VIM
+
 summary: "The final project for EE160, written in C in 2013."
 ---
 
