@@ -8,7 +8,6 @@ published: true
 labels:
   - JavaScript
 ---
-<h1>E10: Reflect on JavaScript 1</h1>
 <body>
   <hr>
   <p>JavaScript has an interesting place in the collection of programming languages and uses a simpler lexicon of keywords that grants a level of accessibility for new users and an unmatchable amount, in my opinion, for complete beginners.  The introduction of 'let' and 'const' as new keywords for declaring less ambiguous variables allows a level of control for more advanced writers over the behavior of their programs without sacrificing the simplicity inherent in its dynamically typed variables.  In other words, a named piece of data can be made to represent a number or a letter or a collection of data or even can represent another named piece of data, all without having to explicitly designate what type of data it is.  This is a double-edged sword, however, that can provide flexibility as well as it can cause unforseen interactions if functions or objects receive unexpected values from them.  What is a program supposed to do with the word "Apple" if it's expecting a value like 24 or some complex object?</p>
