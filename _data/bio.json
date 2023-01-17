@@ -31,18 +31,24 @@
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
+      "institution": "University of Hawaiʻi, Honolulu, HI",
       "area": "Computer Science (expected 2025)",
       "studyType": "B.S.",
-      "startDate": "2019-09-01",
+      "startDate": "2021-01-01",
       "endDate": "Present",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "University of Hawaiʻi Kapiʻolani Community College, Honolulu, HI",
+      "area": "Computer Science",
+      "studyType": "B.S.",
+      "startDate": "2019-09-01",
+      "endDate": "2020-12-31",
       "courses": [
       ]
     }
   ],
-  "work": [],
-  "volunteer": [],
-  "awards": [],
   "references": [
     {
       "name": "Available upon request"
