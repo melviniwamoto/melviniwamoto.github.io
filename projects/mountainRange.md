@@ -1,14 +1,13 @@
 ---
 layout: project
 type: project
-image: img/snake/snake-header.jpg
+image: img/mountain/ka4KM.png
 title: "My Very-Next Project"
-date: 2015
+date: 2016
 published: true
 labels:
-  - C-Language
-  - UNIX
-  - VIM
+  - JavaScript
+  - KhanAcademy
 
 summary: "Exploring my hunger for a growing hobby."
 ---
@@ -19,6 +18,6 @@ summary: "Exploring my hunger for a growing hobby."
 
 <body>
 
-  <img class="img-fluid" src="../img/snake/snake-header.jpg">
+  <img class="img-fluid" src="../img/mountain/ka4KM.png">
   
 </body>
