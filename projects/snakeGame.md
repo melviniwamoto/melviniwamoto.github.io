@@ -18,16 +18,14 @@ summary: "A final project for EE160, written in C in 2015."
 </head>
 
 <body>
-  
+
   <img class="img-fluid" src="../img/snake/snake-header.jpg">
-  
-  <br>
   
   <h2>What is Snake?</h2>
   
   <p>As mass production flooded the market with newly affordable mobile phones, not only with regard to the hardware but with the contracts for service as well, aquiring these phones became much more practical and prevalent for "middle-class" families.  In some cases, as time progressed in these market conditions, even children and young adults were gaining personal access and ownership of these devices.  The game "Snake" came pre-installed onto Nokia phones and it is by this way that I was introduced to the game and it was one of the only other functions of the phone, aside from talk and text, before the appearance of smart phones and the app stores they brought with them.</p>
   
-  <br>
+  <hr>
   
   <h2>How it works</h2>
   
@@ -41,9 +39,9 @@ summary: "A final project for EE160, written in C in 2015."
   
   <p>As part of the final grade for that course we were required to write a Game Design Document (GDD) and implement the game from C Language.  After reviewing example programs that utilized a periodically refreshing grid layout, simulating animation, to display gameplay areas on a text-console I was reminded of the game snake and decided to pursue that for my submission.  The greatest appeal, of course, was that I'd be able to create the program simply from modifying the existing example programs, substantially reducing the time required to produce the project during the hectic period surrounding finals and holidays.</p>
   
-  <img class="img-fluid" src="../img/snake/screenshot-snake-game.jpg">
+  <hr>
   
-  <br>
+  <img class="img-fluid" src="../img/snake/screenshot-snake-game.jpg">
   
   <h2>The struggle to remember</h2>
   
@@ -51,7 +49,7 @@ summary: "A final project for EE160, written in C in 2015."
   
   <p>Although the picture may not show much it does show the playing area and the title of the game, along with the starting points for the head of the snake and the initial position of the token to collect, with the letters S and F respectively.  The token does move around every time it launches and fails to continue running, though.  What is not shown is that there should be a time and score and once the game plays the head of the snake is represented by the &lt, ^, &gt, and the lower-case 'v' to represent direction of travel, a star symbol * for each body segment, and a lower-case 'o' as the tail.  Had I been able to play it, the keys w, a, s, and d would point the snake in the corresponding relative directions.</p>
   
-  <br>
+  <hr>
   
   <h2>Reflection</h2>
   
