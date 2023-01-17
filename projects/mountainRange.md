@@ -36,7 +36,7 @@ summary: "Exploring my hunger for a growing hobby."
   
   <p>The computer science courses consist of modules that have small projects as a sort of capstone and I ended up completing them fairly quickly.  One such of these projects is to produce code that draws a mountain range onto an embeded canvas in the web-page next to the text-editting portion, as shown in the following screenshot.</p>
   
-  <img class="img-fluid" src="../img/mountain/ka4KM.png">
+  <img class="img-fluid" src="../img/mountain/screenshot-mountain.png">
   
   <p>Central to this lesson on simulation is the use of a noise function which generates fluctuating values, much like a normal random number generator (RNG), but it differs from a normal RNG by taking progressive inputs and generating number close to its previous one, so </p>
   
