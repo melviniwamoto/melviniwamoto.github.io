@@ -1,0 +1,24 @@
+---
+layout: project
+type: project
+image: img/snake/snake-header.jpg
+title: "My Very-Next Project"
+date: 2015
+published: true
+labels:
+  - C-Language
+  - UNIX
+  - VIM
+
+summary: "Exploring my hunger for a growing hobby."
+---
+
+<head>
+  <h1>Moving Mountains and Building an Interest</h1>
+</head>
+
+<body>
+
+  <img class="img-fluid" src="../img/snake/snake-header.jpg">
+  
+</body>
