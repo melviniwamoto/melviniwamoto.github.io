@@ -21,9 +21,13 @@ summary: "A final project for EE160, written in C in 2015."
   
   <img class="img-fluid" src="../img/snake/snake-header.jpg">
   
+  <br>
+  
   <h2>What is Snake?</h2>
   
   <p>As mass production flooded the market with newly affordable mobile phones, not only with regard to the hardware but with the contracts for service as well, aquiring these phones became much more practical and prevalent for "middle-class" families.  In some cases, as time progressed in these market conditions, even children and young adults were gaining personal access and ownership of these devices.  The game "Snake" came pre-installed onto Nokia phones and it is by this way that I was introduced to the game and it was one of the only other functions of the phone, aside from talk and text, before the appearance of smart phones and the app stores they brought with them.</p>
+  
+  <br>
   
   <h2>How it works</h2>
   
@@ -39,13 +43,15 @@ summary: "A final project for EE160, written in C in 2015."
   
   <img class="img-fluid" src="../img/snake/screenshot-snake-game.jpg">
   
-  <h2>The struggle to remember</h2>
-  
   <br>
+  
+  <h2>The struggle to remember</h2>
   
   <p>The above is the console output of the actual code used in the submission of the project that was run on a modern mobile-phone Integrated Development Environment (IDE) app that supports c and c++ file compilation.  The source code itself was preserved on the UH UNIX system and I retrieved it before clearing my space on the server when I had to once again use that server and system for the course ICS212 several years later.  Unfortunately, the program requires ncurses, a library that supports refreshing the console output to provide a dynamically changing interface rather than the scrolling list of actions that normal console output, and I had forgotten how I installed it onto the UNIX server.  I resorted to the previously mentioned phone app because it supports ncurses but it does not support the file-linking procedure in <em>makefiles</em>, and moreover the code itself is quite rudimentary, and so is now throwing many errors that I simply don't currently have time to decipher; so my attempt to splice together the code from several files has yielded a broken game that can only display the grid area and the title of the game as a static image.</p>
   
   <p>Although the picture may not show much it does show the playing area and the title of the game, along with the starting points for the head of the snake and the initial position of the token to collect, with the letters S and F respectively.  The token does move around every time it launches and fails to continue running, though.  What is not shown is that there should be a time and score and once the game plays the head of the snake is represented by the &lt, ^, &gt, and the lower-case 'v' to represent direction of travel, a star symbol * for each body segment, and a lower-case 'o' as the tail.  Had I been able to play it, the keys w, a, s, and d would point the snake in the corresponding relative directions.</p>
+  
+  <br>
   
   <h2>Reflection</h2>
   
