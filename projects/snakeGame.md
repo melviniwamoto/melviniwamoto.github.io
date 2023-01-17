@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/snake/snake-header.jpg
-title: "Snake: Nokia nostalgia"
+title: "My Very-First Project"
 date: 2015
 published: true
 labels:
@@ -14,7 +14,7 @@ summary: "A final project for EE160, written in C in 2015."
 ---
 
 <head>
-  <h1>My first Project: Snake - Nokia Nostalgia</h1>
+  <h1>Snake - Nokia Nostalgia</h1>
 </head>
 
 <body>
