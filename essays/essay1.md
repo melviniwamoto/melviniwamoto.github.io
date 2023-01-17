@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Essay 1"
+title: "JavaScript and I: A match made in heaven"
 # All dates must be YYYY-MM-DD format!
 date: 2023-01-16
 published: true
