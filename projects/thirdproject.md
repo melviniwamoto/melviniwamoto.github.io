@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/mountain/ka4KM.png
+image: img/thirdproject/bee-on-sunflower.jpg
 title: "Minding my own beeswax"
 date: 2016
 published: true
@@ -11,16 +11,13 @@ labels:
 
 summary: "A Khan Academy project."
 ---
-
-  
-
 <body>
 <h1>Minding my own beeswax</h1>
 
-<img class="img-fluid" src="../img/mountain/ka4KM.png">
+<img class="img-fluid" src="../img/thirdproject/bee-on-sunflower.jpg">
   
 <hr>
-  
+
 <h2></h2>
   
 <p></p>
