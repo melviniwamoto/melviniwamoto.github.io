@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/mountain/ka4KM.png
-title: "My Very-Next Project"
+title: "Moving Mountains and Building Interest"
 date: 2016
 published: true
 labels:
