@@ -20,6 +20,11 @@ labels:
 <h2>Why use Bootstrap?</h2>
 
 <p>The complexity of using Bootstrap is significant, because you need to know what data these templates require and how and when to give it to them and sometimes even how they interact with each other.  The long list of supported objects--called classes--makes it a daunting prospect to learn, and I've only shallowly interacted with it so far, but from what I've experienced it has been far easier to use <em>it</em> than to try to create these things myself; it invokes a satisfying not-"reinventing the wheel"-vibe when it actually all works out.  It is here where Bootstrap can really shine since merely overriding the default behavior of these classes, like coloring or sizing or text-fonts, enables the designer to create uniqueness or parity as desired without all that leg-work.</p>
+
+<h3></h3>
+
+<img class="img-fluid" src="../img/uiframeworks-e37/comparison.png">
+
 <hr>
 
 <h2>What do I think?</h2>
