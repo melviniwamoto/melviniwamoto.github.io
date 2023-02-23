@@ -23,7 +23,7 @@ labels:
 
 <h3>An example reproduction of a website</h3>
 
-<img class="img-fluid" src="../img/uiframeworks-e37/comparison.png">
+<img class="img-fluid" src="../img/uiframeworks-e37/comparison.png" alt="Visual comparison of a website and its reproduction">
 
 <p>The above image shows a reference photo of the original website that is being reproduced on the left with the reproduction on the right.  When the actual HTML is inspected, one might find that there are a similar amount of lines but what would not be obvious is the difference in the amount of work I had to do as compared to the original designer.  Inspection of the CSS style sheet, however, <em>would</em> show that I only added a few lines--which alters the expansive Bootstrap style sheet--whereas the style sheet that the original designer used must have been extensive and most likely the length of it is much closer to the Bootstrap package than to my style sheet.</p>
 
