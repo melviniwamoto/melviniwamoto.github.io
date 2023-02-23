@@ -22,7 +22,7 @@ The complexity of using Bootstrap is significant, because you need to know what 
 
 ## What do I think?
 
-In the context of being under a time-constraint assignment--like for Workout-of-the-Day (WOD)--and considering my equally limited understanding of HTML and CSS, Bootstrap has enabled me a level of efficiency that I simply could not even imagine without it.  The excellent documentation, again as compared to those for HTML and CSS, provides working examples that simply takes all the pain out of the construction of the page and their elements.  I even learned a few things about plain HTML and CSS that I just wasn't understanding otherwise, by seeing how those tags and classes were used by Bootstrap, and feel like the whole experience gave me that invaluable insight into web pages that I had assumed I would get from learning HTML.
+In the context of being under a time-constrained assignment--like for Workout-of-the-Day (WOD)--and considering my equally limited understanding of HTML and CSS, Bootstrap has enabled me a level of efficiency that I simply could not even imagine without it.  The excellent documentation, again as compared to those for HTML and CSS, provides working examples that simply takes all the pain out of the construction of the page and their elements.  I even learned a few things about plain HTML and CSS that I just wasn't understanding otherwise, by seeing how those tags and classes were used by Bootstrap, and feel like the whole experience gave me that invaluable insight into web pages that I had assumed I would get from learning HTML.
 
 ### How do I feel?
 
