@@ -8,7 +8,6 @@ published: true
 labels:
 - javascript
 ---
-## Writing for tomorrow, today.
 ### Speaking in tongues
 
 Understanding others can be troublesome when there are language barriers, but it is even more pronounced when someone uses idioms you're unfamiliar with; "What do you mean the early bird catches the worm?  Which bird?"  Now imagine that the speaker you're listening to isn't even necessarily being intelligible in that language.  That is what it is like, sometimes, while reading my own work.  This is why I try to provide enough context to myself, or anyone else for that matter, about what I was trying to accomplish and there are certain things that we do in programming which can alleviate that very human struggle of trying to understand yourself.
