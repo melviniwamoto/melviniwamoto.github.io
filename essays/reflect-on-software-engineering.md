@@ -21,11 +21,15 @@ For those of us not acquainted with Arthurian legend, the holy grail--according 
 
 <img width="40%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very detailed back-end transitioning to a very simple front-end">
 
-The **front-end** refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.  The **back-end** refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".
+The **front-end** refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.
+
+The **back-end** refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".
 
 A developer can specialize in either, and it seems that many pursue at least a cursory understanding of both, but each person inevitably tends toward either one of them according to their strength or experience.
 
-The holy grail more resembles a utopian ideal, even though it is *possible* to truly know both intimately, and can obfuscate the reality into something comical, illustrated by this meme.  Now, to call myself a back-end developer is too much of an overstatement, let alone a full-stack one.  I *can* see, however, that the ability to have something simple at the front, and even if it is wrong, to complete a detailed back-portion is preferable to leaving it blank.  In my opinion, it is worth pursuing ability in both, even if only shallowly in one; and so my quest for the grail goes ever-onward.
+The holy grail more resembles a utopian ideal, even though it is *possible* to truly know both intimately, and can obfuscate the reality into something comical, illustrated hilariously by this meme.
+
+Now, to call myself a back-end developer is too much of an overstatement--let alone a full-stack one--but, in my opinion, the ability to have something simple at the front is preferable to leaving it blank, even if it is wrong, as long as it works to complete the picture.  The quest goes on.
 
 ---
 ### The right tools for the job
