@@ -19,7 +19,7 @@ labels:
 ## Engineering an engineer
 For those of us not acquainted with Arthurian legend, the holy grail--according to [Merriam-Webster](https://www.merriam-webster.com/dictionary/Holy%20Grail)--can be "an object or goal that is sought after for its great significance".  With respect to software engineering skills, the quest for the holy grail can be embodied in the pursuit to become a **full-stack** developer.  A full-stack developer is one who is capable of producing both the *front-end* and *back-end* of an application.
 
-<img width="50%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very detailed back-end transitioning to a very simple front-end">
+<img width="40%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very detailed back-end transitioning to a very simple front-end">
 
 The **front-end** refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.  The **back-end** refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".
 
@@ -27,6 +27,7 @@ A developer can specialize in either, and it seems that many pursue at least a c
 
 The holy grail more resembles a utopian ideal, even though it is *possible* to truly know both intimately, and can obfuscate the reality into something comical, illustrated by this meme.  Now, to call myself a back-end developer is too much of an overstatement, let alone a full-stack one.  I *can* see, however, that the ability to have something simple at the front, and even if it is wrong, to complete a detailed back-portion is preferable to leaving it blank.  In my opinion, it is worth pursuing ability in both, even if only shallowly in one; and so my quest for the grail goes ever-onward.
 
+---
 ### The right tools for the job
 
 Producing anything presents the obvious conundrums; what to do and how to go about it.  Rather than to design and build these abstract ideas up ourselves "from scratch" we learned how to use **Frameworks**.  These simply are sets of pre-made tools and resources that help us to accomplish the tasks of building either the front or back end--or in the case of some, both--of an application.
@@ -42,12 +43,14 @@ One such framework which concerns itself with the front end of webpages is calle
 
 On the other hand, [**MongoDB**](https://www.mongodb.com/) is a back-end framework which implements the **design pattern**--the general form that a commonly desired functionality takes--of structured data storage for client and server databases, and is written in many programming languages, but we used the one for javascript.
 
+---
 ### Their powers combined
 
 A third type of framework correlates to the combination of both the front and back end and is intuitively named a full-stack framework.  A powerful example of this is called [**React**](https://react.dev/) which combines HTML, CSS, and javascript, all into a new type of multi-lingual file which can save data as a normal javascript program while it interfaces with a user through a webpage.
 
 Some full-stack frameworks can also be composed of other frameworks, combining the strengths of both; adding Bootstrap to React expands both into a new React-Bootstrap *composite* framework which allows easy Bootstrap styling through it's components with Reacts complex back-end functionality.
 
+---
 #### A hat on a hat
 
 Some of these frameworks even come with **packages** which include more commonly implemented functionality; the [**Uniforms-bootstrap5**](https://uniforms.tools/) package, for example, satisfies the common need of many React-Bootstrap apps to retrieve information from *forms* on webpages and ensuring that that data is valid.
@@ -56,9 +59,10 @@ The solutions to this need tends to contain complex procedures that take the sam
 
 For example, the boxes where you enter your payment information to make purchases online or that one that is ensuring you make your password 8 characters long are both a special type of component that may have come from Uniforms, or some other similar package.
 
-#### To whom it may concern
+---
+<img width="30%" class="rounded float-end pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
 
-<img width="40%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
+#### To whom it may concern
 
 The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.  We refer to this type of monotonous writing as boilerplate code because of how the shape of implementing them, similar to the algorithm for the Uniforms packages, seems to look identical from project to project when these projects consist of the same parts.  The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
 
