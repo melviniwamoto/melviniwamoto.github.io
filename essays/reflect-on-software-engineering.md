@@ -6,55 +6,72 @@ title: "The quest for the holy grail."
 date: 2023-05-02
 published: true
 labels:
-- javascript
-- CSS
 - HTML
+- CSS
+- javascript
 - Bootstrap5
 - React
 - Meteor
 - MongoDB
+- Uniforms-bootstrap5
+- Node.js
 ---
 ## Engineering an engineer
-For those of us not acquainted with Arthurian legend, the holy grail--according to [Merriam-Webster](https://www.merriam-webster.com/dictionary/Holy%20Grail)--can be "an object or goal that is sought after for its great significance".  With respect to software engineering skills, the quest for the holy grail can be embodied in the pursuit to become a _full-stack_ developer.  A full-stack developer is one who is capable of producing both the _front-end_ and _back-end_ of an application.
+For those of us not acquainted with Arthurian legend, the holy grail--according to [Merriam-Webster](https://www.merriam-webster.com/dictionary/Holy%20Grail)--can be "an object or goal that is sought after for its great significance".  With respect to software engineering skills, the quest for the holy grail can be embodied in the pursuit to become a **full-stack** developer.  A full-stack developer is one who is capable of producing both the *front-end* and *back-end* of an application.
 
-<img width="400px" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very detailed back-end transitioning to a very simple front-end">
+<img width="50%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very detailed back-end transitioning to a very simple front-end">
 
-The front-end refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.  The back-end refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".  A developer can specialize in either, and it seems that many pursue at least a cursory understanding of both, but each person inevitably tends toward either one of them according to their strength or experience.
+The **front-end** refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.  The **back-end** refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".
 
-So my holy grail more resembles a utopian ideal, practically, and can obfuscate the reality into something comical.  This funny meme illustrates this point.  Now, to call myself a back-end developer is too much of an overstatement, let alone a full-stack one, the ability of having something simple at the front to complete a detailed back-portion is preferable to leaving it blank or getting it completely wrong.  In my opinion, it is worth pursuing ability in both, and so the quest for the grail goes ever-onward.
+A developer can specialize in either, and it seems that many pursue at least a cursory understanding of both, but each person inevitably tends toward either one of them according to their strength or experience.
 
-### The right tool(s) for the job
+The holy grail more resembles a utopian ideal, even though it is *possible* to truly know both intimately, and can obfuscate the reality into something comical, illustrated by this meme.  Now, to call myself a back-end developer is too much of an overstatement, let alone a full-stack one.  I *can* see, however, that the ability to have something simple at the front, and even if it is wrong, to complete a detailed back-portion is preferable to leaving it blank.  In my opinion, it is worth pursuing ability in both, even if only shallowly in one; and so my quest for the grail goes ever-onward.
 
-Producing anything presents the obvious conundrums; what to do and how to go about it.  An easy, quick, and powerful alternative that we've been introduced to--rather than to design and build these up ourselves "from scratch"--is to learn how to use _Frameworks_.  These simply are sets of pre-made tools and resources that help us to accomplish the tasks of building either the front or back end--or in the case of some, both--of an application.  There are several options--in many programming languages--to choose from to suit several different types of applications but the ones we worked with were created to use HTML, CSS, and javascript to make webpages.
+### The right tools for the job
 
+Producing anything presents the obvious conundrums; what to do and how to go about it.  Rather than to design and build these abstract ideas up ourselves "from scratch" we learned how to use **Frameworks**.  These simply are sets of pre-made tools and resources that help us to accomplish the tasks of building either the front or back end--or in the case of some, both--of an application.
+
+There are several options--in many programming languages--to choose from to suit several different types of applications but the ones we worked with were created to use javascript, through [Node.js](https://nodejs.org/en), and HTML with CSS to make webpages.
+
+---
 ## _Framing_ the conversation
 
-Frameworks are classified based on which part of the application it is relevant to; so there are front-end frameworks and back-end frameworks.  One such framework concerns itself with the front end of webpages and is called _Bootstrap5_ and contains pre-made default HTML and CSS combinations, that are commonly used together for specific purposes, that can be used concisely like an abbreviation, and are called _components_.  On the other hand, _MongoDB_ is a back-end framework which implements the _design pattern_--the general form that a commonly desired functionality takes--of structured data storage for client and server databases, and is written in many programming languages.
+Frameworks are classified based on which part of the application it is relevant to; so there are front-end frameworks and back-end frameworks.
+
+One such framework which concerns itself with the front end of webpages is called [**Bootstrap5**](https://getbootstrap.com/).  This is a UI-Framework consisting of HTML and CSS combinations, called "***classes***", that fulfill the common needs of portioning webpages, the coloring of text and backgrounds, and for displaying images.
+
+On the other hand, [**MongoDB**](https://www.mongodb.com/) is a back-end framework which implements the **design pattern**--the general form that a commonly desired functionality takes--of structured data storage for client and server databases, and is written in many programming languages, but we used the one for javascript.
 
 ### Their powers combined
 
-A third type of framework correlates to the combination of both the front and back end and is intuitively named a full-stack framework.  A powerful example of this is called _React_ which combines HTML, CSS, and significantly complex javascript, all into a new type of multi-lingual file.  Some full-stack frameworks can also be composed of other frameworks, combining the strengths of both; adding Bootstrap to React expands both into a new React-Bootstrap framework which allows easy Bootstrap styling through it's components with Reacts complex back-end functionality.
+A third type of framework correlates to the combination of both the front and back end and is intuitively named a full-stack framework.  A powerful example of this is called [**React**](https://react.dev/) which combines HTML, CSS, and javascript, all into a new type of multi-lingual file which can save data as a normal javascript program while it interfaces with a user through a webpage.
+
+Some full-stack frameworks can also be composed of other frameworks, combining the strengths of both; adding Bootstrap to React expands both into a new React-Bootstrap *composite* framework which allows easy Bootstrap styling through it's components with Reacts complex back-end functionality.
 
 #### A hat on a hat
 
-Some of these frameworks even come with "packages" which include more commonly implemented functionality; the Uniforms-bootstrap5 package satisfies the React-Bootstrap apps' common need of retrieving information from "forms" on webpages and ensuring that that data is valid.  These are complex procedures that tend to take the same shape, so they were generalized and gathered up and included into a package that many can use.  For example, the boxes where you enter your payment information to make purchases online or that one that is ensuring you make your password 8 characters long are both a special type of component that may have come from Uniforms-bootstrap5, or some other similar package for another language.
+Some of these frameworks even come with **packages** which include more commonly implemented functionality; the [**Uniforms-bootstrap5**](https://uniforms.tools/) package, for example, satisfies the common need of many React-Bootstrap apps to retrieve information from *forms* on webpages and ensuring that that data is valid.
 
-### To whom it may concern
+The solutions to this need tends to contain complex procedures that take the same general shape, and also an appropriately obscene amount of time to make, so they were generalized and gathered up and included into a package that many can use.  This need is so prevalent that uniforms supports frameworks other than Bootstrap.
 
-The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.  We refer to this type of monotonous writing as boilerplate code because of how the shape of implementing them, similar to packages, seems to look identical from project to project when these projects consist of the same parts.  The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
+For example, the boxes where you enter your payment information to make purchases online or that one that is ensuring you make your password 8 characters long are both a special type of component that may have come from Uniforms, or some other similar package.
 
-<img width="400px" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
+#### To whom it may concern
 
-We do this, ourselves, all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that barely change each time you need to use it.  We tend to recognize that pattern and save the generic form in a place that we can copy from and re-use the time already devoted to creating one of them.  In programming, as in any document generation, we call these repeating forms of boilerplate as _Templates_.
+<img width="40%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
 
-### Is this culture?
+The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.  We refer to this type of monotonous writing as boilerplate code because of how the shape of implementing them, similar to the algorithm for the Uniforms packages, seems to look identical from project to project when these projects consist of the same parts.  The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
 
-The amount of saved time, naturally, of using templates becomes much more pronounced when dealing with projects with increasing numbers of parts, or when dealing with significantly differing constituent parts; as would be the case when manually compiling full-stack frameworks from front and back end frameworks individually.  
+It's such a common practice that we do this all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that barely change each time you need to use it.  We tend to recognize that pattern and either obtain or produce a generic form that we can copy from and re-use.  In programming, as in any document generation, we call these repeating forms of *boilerplate* as **Templates**.
 
-There are also "packages" which extend frameworks with commonly desired functionality, like how the Uniforms-bootstrap5 package implements the commonly used functionality in a React-Bootstrap app of filling out forms on webpages.  For example, when you sign in to your account on a site or when you enter your payment information to make purchases online; these are done in "forms" that the Uniforms-bootstrap5 package has made general solutions for which can be utilized to quickly make them.
+## All the marbles
 
-Some of the most powerful frameworks, however, are those which support the parallel development of both the front and back ends, which combine their respective frameworks and have done the work of implementing the interactions between them.  These types of frameworks are called, intuitively, full-stack frameworks and exist in many programming languages.  React itself is a full-stack framework because of how the javascript in it is run "under-the-hood" on the server-side, but it doesn't necessarily implement efficient large-scale databases "out-of-the-box".
+The amount of time saved from using templates becomes much more pronounced when dealing with projects with increasing numbers of packages, or when dealing with significantly differing packages; as would be the case when manually combining a full-stack framework from front and back end frameworks individually.
 
-## Ethics in Software Engineering
+The most powerful frameworks, naturally, are those with the most powerful constituents, that all share common languages, and are implemented with their own package.  Finally, we come to [**Meteor**](https://guide.meteor.com/) which can be configured to combine React with MongoDB, bringing in a powerful and flexible front end framework with a powerful and flexible back end framework and connected through the common language of javascript.
+
+Templates of [**Meteor-React**](https://guide.meteor.com/react.html) applications can get quite hefty and can contain large amounts of boilerplate to actually connect these frameworks together.  It also wouldn't be an understatement to say that you need encyclopedic knowledge of how each part works in order to know how things will interact.  It is, however, extremely powerful to work the entire project in a common set of languages, and in one place, and to have the flexibility of countless packages to support evolving functionality and efficiency while prototyping works-in-progress..
+
+## 
 
 ---
