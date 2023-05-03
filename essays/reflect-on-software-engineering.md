@@ -78,6 +78,7 @@ We tend to recognize that pattern and either obtain or produce a generic form th
 
 The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.  In programming, as in any document generation, we call these repeating forms of boilerplate as **Templates**.
 
+---
 ## All the marbles
 
 The amount of time saved from using templates becomes much more pronounced when dealing with projects with increasing numbers of packages, or when dealing with significantly differing packages; as would be the case when manually combining a full-stack framework from front and back end frameworks individually.
