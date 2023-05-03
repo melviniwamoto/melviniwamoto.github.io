@@ -64,21 +64,19 @@ The solutions to this need tends to contain complex procedures that take the sam
 For example, the boxes where you enter your payment information to make purchases online or that one that is ensuring you make your password 8 characters long are both a special type of component that may have come from Uniforms, or some other similar package.
 
 ---
-<img width="30%" class="rounded float-end pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
-
 #### To whom it may concern
 
 The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.
 
-We refer to this type of monotonous writing as *boilerplate* code because of how the shape of implementing them, similar to the algorithm for the Uniforms packages, seems to look identical from project to project when these projects consist of the same parts.
+We refer to this type of monotonous writing as *boilerplate* code because of how the shape of it changes very little between different projects.
 
-The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
+We see boilerplate all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that change by one line each time you need to use it.
 
-It's such a common practice that we do this all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that barely change each time you need to use it.
+<img width="30%" class="rounded float-end pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
 
-We tend to recognize that pattern and either obtain or produce a generic form that we can copy from and re-use, and some even profit from making them available, like the many greeting-card companies or even the postal service.
+We tend to recognize that pattern and either obtain or produce a generic form that we can copy from and re-use, and some even profit from making them available, like the many greeting-card companies do with cards.
 
-In programming, as in any document generation, we call these repeating forms of boilerplate as **Templates**.
+The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.  In programming, as in any document generation, we call these repeating forms of boilerplate as **Templates**.
 
 ## All the marbles
 
