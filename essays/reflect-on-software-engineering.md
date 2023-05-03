@@ -17,11 +17,11 @@ labels:
 ## Engineering an engineer
 For those of us not acquainted with Arthurian legend, the holy grail--according to https://www.merriam-webster.com website--can be "an object or goal that is sought after for its great significance".  With respect to software engineering skills, the quest for the holy grail can be embodied in the pursuit to become a _full-stack_ developer.  A full-stack developer is one who is capable of producing both the _front-end_ and _back-end_ of an application.
 
+<img width="400px" class="rounded float-start pe-4" src="../img/full-stack-funny.jpg" alt="Funny picture showing a very detailed back-end transitioning to a very simple front-end">
+
 The front-end refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the "client-side" in a website context.  The back-end refers to the parts that the user doesn't see, and is interchangeably referred to as the "server-side".  A developer can specialize in either, and it seems that many pursue at least a shallow understanding of both, but each person understandably tends toward either one of them according to their strength or experience.
 
 So my use of the holy grail resembles a utopian ideal, practically, and when used improperly can obfuscate the reality into something comical.  This funny meme illustrates this point should I make that claim.
-
-<img width="400px" class="rounded float-start pe-4" src="../img/full-stack-funny.jpg" alt="Funny picture showing a very detailed back-end with a very simple front-end">
 
 Now, aside from the fact that my implication of being a back-end developer, let alone a full-stack one, is too much of an overstatement; having something simple at the front to at least complete a relatively detailed back-portion is preferable to leaving it blank or getting it completely wrong, in my opinion, and is worth pursuing.  The quest goes ever-onward.
 
