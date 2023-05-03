@@ -68,9 +68,17 @@ For example, the boxes where you enter your payment information to make purchase
 
 #### To whom it may concern
 
-The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.  We refer to this type of monotonous writing as boilerplate code because of how the shape of implementing them, similar to the algorithm for the Uniforms packages, seems to look identical from project to project when these projects consist of the same parts.  The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
+The largest benefit of finding these composite frameworks with support for large amounts of packages is, of course, not having to do much of the work of making each of it's parts function together.
 
-It's such a common practice that we do this all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that barely change each time you need to use it.  We tend to recognize that pattern and either obtain or produce a generic form that we can copy from and re-use.  In programming, as in any document generation, we call these repeating forms of *boilerplate* as **Templates**.
+We refer to this type of monotonous writing as *boilerplate* code because of how the shape of implementing them, similar to the algorithm for the Uniforms packages, seems to look identical from project to project when these projects consist of the same parts.
+
+The kinder people of the community save these boilerplate files when they spot the pattern and provide them to the rest of us to use and improve on.
+
+It's such a common practice that we do this all the time when we find we're using certain groups of words over and over again in the same way; as with writing the same "Happy New Years, Person-Y" or reprinting job resumes that barely change each time you need to use it.
+
+We tend to recognize that pattern and either obtain or produce a generic form that we can copy from and re-use, and some even profit from making them available, like the many greeting-card companies or even the postal service.
+
+In programming, as in any document generation, we call these repeating forms of boilerplate as **Templates**.
 
 ## All the marbles
 
