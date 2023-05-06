@@ -11,6 +11,7 @@ labels:
 - React
 - MongoDB
 - Meteor
+- github
 ---
 For those of us not acquainted with Arthurian legend, the holy grail--according to [Merriam-Webster](https://www.merriam-webster.com/dictionary/Holy%20Grail)--can be "an object or goal that is sought after for its great significance".
 
@@ -25,7 +26,7 @@ The **back-end** refers to the parts that the user doesn't see, and is interchan
 A developer can specialize in either, and it seems that many pursue at least a cursory understanding of both, but each person inevitably tends toward either one of them according to their strength or experience.
 
 ### The holy grail
-<img width="40%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very simple front-end and a very detailed back-end ">
+<img width="30%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very simple front-end and a very detailed back-end ">
 
 The holy grail more resembles a utopian ideal in the context I framed for it--though it *is* possible to truly know both intimately--and can distort the reality into something comical, illustrated hilariously by this meme.
 
@@ -55,9 +56,9 @@ Frameworks are classified based on which part of the application it is relevant 
 
 #### Front-end frameworks
 
-An example of a **front-end framework** is [**React**](https://react.dev/) which fully integrates normal javascript with HTML and CSS, which is somewhat more involved to accomplish otherwise, into objects called ***Component***s.
+An example of a **front-end framework** is [**React**](https://react.dev/) which fully integrates normal javascript with HTML and CSS, which is somewhat more involved to accomplish otherwise, into objects called ***Components***.
 
-Another example is [**Bootstrap**](https://getbootstrap.com/) which provides commonly used combinations of HTML and CSS for the layout and theming of webpages through easily referenced objects called ***Class***es.
+Another example is [**Bootstrap**](https://getbootstrap.com/) which provides commonly used combinations of HTML and CSS for the layout and theming of webpages through easily referenced objects called ***Classes***.
 
 #### Back-end Frameworks
 
@@ -69,7 +70,7 @@ The package allows a program to protect its data from users by segregating them 
 
 Some frameworks come as combinations of packages that are often used together, as for [**React-Bootstrap**](https://react-bootstrap.github.io/).
 
-Packages can even *expand* frameworks, like the [**Uniforms-bootstrap5**](https://uniforms.tools/) package, which satisfies the common need of many React-Bootstrap apps to retrieve information from ***form***s--the placed where users give input, like email and password for signing in--on webpages and ensuring that the data is valid.
+Packages can even *expand* frameworks, like the [**Uniforms-bootstrap5**](https://uniforms.tools/) package, which satisfies the common need of many React-Bootstrap apps to retrieve information from ***forms***--the placed where users give input, like email and password for signing in--on webpages and ensuring that the data is valid.
 
 ---
 ## Their powers combined
@@ -82,18 +83,32 @@ Whether when writing the same "Happy New Years, *Person-Y*!" or reprinting job r
 
 The *boilerplate* is the repetitive parts of a document and are then naturally produced into a generic form that we can re-use called **templates**.
 
-<img width="30%" class="rounded float-end pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
-
+<img width="25%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter">
 
 **Templates** for [**Meteor-React**](https://guide.meteor.com/react.html) include all of the necessary packages that it commonly takes to make those specific types of webpage-applications function.
 
 The ones I've been using included helpful working examples of databases and webpages with basic page navigation and user accounts already implemented.
 
-### Team-work makes the dream work
-Stuff about github?
+---
+## Forming a party for the quest
+The best part of having a full-stack framework is having a single *folder* to work in, especially for when a *team* of people are contributing to different or both "ends" of the program's *files*.
+
+Common *access* to that folder is the obvious first problem but can be solved by storing the folder in a central accessible location, like [github](https://github.com/).
+
+Further easily-foreseeable problems can include a clear understanding of the tasks needed to be done to complete the *work*, and a common vision for the end *product*.
+
+**Issue-Driven Project Management** solves this problem by having a central location for *planning*, separate from the actual content of the project, where team members create and manage a list of *issues*.
+
+**Issues** are tasks--or groups of tasks--that take an approximately equal amount of time to complete, preferably 2-3 days, but can be adjusted to encompass more or less based on how much work it turns out to *actually* take to complete them.
+
+Projects can have groups of issues called **Milestones** which can represent certain phases of development like planning, implementing, and testing.
 
 ---
-## Conclusion
-I will probably be terse
+## Team work makes the dream work
+Our endeavor for the holy grail should ideally lead to an understanding of both ends of development as much as possible.
+
+The reality, however, is that it is much more efficient to work as a group with those whose strengths complement your own.
+
+In this way the quest for the holy grail can be brought to a success much sooner in the form of the collective.
 
 ---
