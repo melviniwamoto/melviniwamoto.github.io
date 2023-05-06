@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/manoa-recipes/manoa-recipes-logo.png
 title: "Good food, good people, good times"
-date: 2016
+date: 2023
 published: true
 labels:
   - Meteor-React
