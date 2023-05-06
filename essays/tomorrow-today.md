@@ -11,17 +11,33 @@ labels:
 ---
 ### Speaking in tongues
 
-Understanding others can be troublesome when there are language barriers, but it can be even more pronounced if someone uses idioms you're unfamiliar with; "What do you mean the early bird catches the worm?  Which bird?"  Now imagine that the speaker you're listening to isn't even necessarily being intelligible in that language.  That is what it is like, sometimes, while reading my own work.  This is why I try to provide enough context to myself, or anyone else for that matter, about what I was trying to accomplish and there are certain things that we do in programming which can alleviate that very human struggle of trying to understand yourself.  There also exists certain things we can do in another very human pursuit: the desire to accomplish something without having to do any unnecessary work.
+Understanding others can be troublesome when there are language barriers, but it can be even more pronounced if someone uses idioms you're unfamiliar with; "What do you mean the early bird catches the worm?  Which bird?"
+
+Now imagine that the speaker you're listening to isn't even necessarily being intelligible in that language.
+
+That is what it is like, sometimes, while reading my own work.
+
+This is why I try to provide enough context to myself, or anyone else for that matter, about what I was trying to accomplish and there are certain things that we do in programming which can alleviate that very human struggle of trying to understand yourself.
 
 ### Paradigm-a-dozen
 
-Recognizing patterns comes naturally to us as "great" apes, and if we see something repeating we may find it aesthetic pleasing, or not, depending on the context.  In the context of _work_ the prospect of repeating the same laborious tasks over and over is what leads to innovation, like in the case of power tools.  In programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how _frequently_ we encounter these repeating patterns.  The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
+In the context of *work* the prospect of repeating the same laborious tasks over and over is what leads to innovation, like in the case of power tools.
 
-When we see a repeating set of tasks we like to group them up into nice little packages that we "define" called "functions", and we like to define them with overly-descriptive names.  In this way we can cut down on the sheer amount of letters we are looking at while still giving context as to what it is doing or represents, just as it is when you abbreviate a set of words that you will reference again in a document, as I've done for DRY above.  Furthermore, By grouping it up into a function we can change one part _inside_ of it and affect it every time it is used, as would be the case had I misspelled the "definition" of that abbreviation above.
+When programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating patterns.
 
-#### Seeing the trees through the forest
+The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
 
-Of course, there can be larger patterns to see when certain sets of _functions_ are repeated, so we in-turn create higher-order functions, and so-on, but the key point is to have the overly descriptive names at every level that explains what it actually does.  We can even separate these functions from the file that uses it and "import" these functions to further improve readability and to prevent it from being changed where it is being used, and this concept is _encapsulated_ as the "module" and is perhaps one of the most useful imperatives in software design patterns that I've come across so far.
+When we see a repeating set of tasks we like to group them up into nice little packages that we "define" called "functions".
+
+Defining these functions with overly-descriptive names is a type of *design pattern* called the ***Facade* pattern** because of how the name of it hides the complexity *behind* it.
+
+#### Spotting the trees in the forest
+
+Of course, there can be larger patterns to see when certain sets of *functions* are repeated, so we in-turn create higher-order functions, and so-on, but the key point is to have the overly descriptive names.
+
+We can even separate these functions from the file that uses it and "import" them into multiple files, improving the benefit of facade and preventing it from being changed where it is used so it doesn't affect other files.
+
+this concept is _encapsulated_ as the "module" and is perhaps one of the most useful imperatives in software design patterns that I've come across so far.
 
 In this same fashion, we can collect either repeating or related sets of data--_especially_ when they relate to or refer to the same thing--into "objects" just as we do when we refer to the "covers" and "pages" as simply a "book" or the "name" and "age" that is represented or identified when referring to a specific "person."  These objects that we create often have specific functions that they perform, or that are performed on them, and we call them "methods" to differentiate it from "functions" and to infer it's context of being related to an object.  These objects and it's methods can also be encapsulated into a separated "module" as well and helps to keep the main file size--where the rubber meets the road, if you will--at a minimum while things become increasingly complex.
 
