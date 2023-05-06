@@ -27,19 +27,65 @@ When programming in javascript, we have a unique opportunity to create these inn
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
 
-When we see a repeating set of tasks we like to group them up into nice little packages that we "define" called "functions".
+    sky = blue;
+    rain = likely;
+    ...
+    if (sky === blue) {
+        rain = notLikely;
+    } else {
+        rain = possible;
+    }
+    ...rain is changed to notLikely...
+    ...
+    ...perhaps later it is written again...
+    ...
 
-Defining these functions with overly-descriptive names is a type of *design pattern* called the ***Facade* pattern** because of how the name of it hides the complexity *behind* it.
+When we see a repeating set of tasks being performed on pieces of data we like to group them up into nice little packages that we "define" called **functions**.
 
-#### Spotting the trees in the forest
+    myFunction = (skyData) => {
+        ...determine rain likelyhood...
+    }
 
-Of course, there can be larger patterns to see when certain sets of *functions* are repeated, so we in-turn create higher-order functions, and so-on, but the key point is to have the overly descriptive names.
+Defining these functions with overly-descriptive names is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context to it's purpose.
 
-We can even separate these functions from the file that uses it and "import" them into multiple files, improving the benefit of facade and preventing it from being changed where it is used so it doesn't affect other files.
+    performSpecificTask = (data) => {
+        ...mysterious...
+        ...complexity...
+    }
 
-this concept is _encapsulated_ as the "module" and is perhaps one of the most useful imperatives in software design patterns that I've come across so far.
+*Sets* of functions can also repeat so we then create higher-order functions, and so-on, to keep a high standard of readability of our work.
 
-In this same fashion, we can collect either repeating or related sets of data--_especially_ when they relate to or refer to the same thing--into "objects" just as we do when we refer to the "covers" and "pages" as simply a "book" or the "name" and "age" that is represented or identified when referring to a specific "person."  These objects that we create often have specific functions that they perform, or that are performed on them, and we call them "methods" to differentiate it from "functions" and to infer it's context of being related to an object.  These objects and it's methods can also be encapsulated into a separated "module" as well and helps to keep the main file size--where the rubber meets the road, if you will--at a minimum while things become increasingly complex.
+    dressAppropriately = (sky, clothes) => {
+        chanceOfRain = askAstrologer(sky);
+        coat = chooseCoat(chanceOfRain, clothes);
+        chooseShirt(isWorkingToday(), clothes);
+        ...etc..
+    }
+
+### Spotting the trees in the forest
+
+    treeSizeA = 30;
+    treeAgeA = 20;
+    treeSizeB = 32;
+    treeAgeB = 26;
+
+The result of applying facade on sets of *data* is called **objects** and is an old idea in programming.
+
+    tree = {
+        name: A,
+        size: 30,
+        age: 20,
+    }
+
+
+
+These objects have the ability to *perform* certain functions; a tree might have a *grow* function that adds to it's size and age.
+
+These functions related to objects are called **methods**.
+
+Separating these functions and objects into their own files is called the ***module* pattern** and allows them to be imported into *multiple* files and ensures that they aren't changed over-time so that there aren't many of them with the same names that do different things.
+
+The module is perhaps one of the most useful design patterns that I've come across so far because of how much it improves the readability of my work.
 
 #### _Not_ more than meets the eye!
 
