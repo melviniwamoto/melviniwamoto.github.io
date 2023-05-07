@@ -128,7 +128,7 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
 
 The **module pattern** arose from this need and allows these ***modules*** to be *exported* from their files and *imported* into multiple files.
-> Example tree.js
+> *Example tree.js*
 > ```js
 > export class tree {...}
 > export const plantGrove(...) {...}
@@ -146,7 +146,7 @@ The **module pattern** arose from this need and allows these ***modules*** to be
 > }
 > ```
 
-> myProgram.js
+> *myProgram.js*
 > ```js
 > // The top of the file
 > import tree from '/path-to-file/tree.js';
@@ -161,15 +161,15 @@ As a result of segregation, the *module* is also protected from change; this enf
 
 This concept is called **loose-coupling** and allows the programmer to focus on integration *where* these modules interact rather than implementing interaction *inside* of them and tying objects together.
 
-> person.js
-> ```js
-> class person {
->   constructor(...) {...}
->   <del>hugTree(tree);</del>
-> }
-> export const plantGrove(...) {...}
-> // ...etc
-> ```
+*person.js*
+```js
+class person {
+  constructor(...) {...}
+  <del>hugTree(tree);</del>
+}
+export const plantGrove(...) {...}
+// ...etc
+```
 
 ---
 ## Seeing the forest through the trees
