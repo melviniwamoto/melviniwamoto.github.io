@@ -19,14 +19,15 @@ That is what it is like, sometimes, while reading my own work.
 
 This is why I try to provide enough context to myself, or anyone else for that matter, about what I was trying to accomplish and there are certain things that we do in programming which can alleviate that very human struggle of trying to understand yourself.
 
-### Paradigm-a-dozen
+---
+## Paradigm-a-dozen
 
 In the context of *work* the prospect of repeating the same laborious tasks over and over is what leads to innovation, like in the case of power tools.
 
 When programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating patterns.
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
-
+> Typical case of repeating patterns:
 > ```js
 > const hourlyWage = 15;
 > // 20 hours a week
@@ -38,9 +39,10 @@ The first time many of us are made to be aware of this, in our specific context,
 > yearlyIncome = 50 * weeklyIncome;
 > // ...Change things and do it yet again...
 > ```
-When we see a repeating set of tasks being performed on pieces of data we like to group them up into nice little packages that we call **functions**.
+When we see a repeating set of tasks being performed on, or using, pieces of data we like to group them up into nice little packages that we call **functions**.
+> Format of a function:
 > ```js
-> const performTasks = (whatItNeeds) => {
+> const functionName = (whatItNeeds) => {
 >   // ...esoteric operations...
 >   return whatYoudExpect;
 > }
@@ -96,43 +98,87 @@ The **Class** hides the unwieldy creation of these objects behind a special type
 > // ...etc
 > ```
 
-These objects perform a variable amount of functions; a tree might have a vast amount of functions, including a *grow* function that adds to it's height and age.
+These objects perform a variable amount of functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
 
-Functions relating to changing the data of classes are called **methods**.
+Functions relating to changing the data of objects of a class are called **methods**.
 
 These include *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to interact with it.
 
 > ```js
 > class tree {
->   constructor (...etc) {
->       // ...etc
->   }
+>   constructor (...) {...}
 >   // Methods
->   acceptHug(treeHugger) {
->       this.friends.push(treeHugger);
+>   // Accept a hug
+>   hug(huggerName) {
+>       // Add to list
+>       this.friends.push(huggerName);
+>       // ...etc
 >       return this.deepConnection;
 >   }
 >   // ...etc
 > }
 > // Helper-Methods
-> const plantGrove(...etc) {
+> const plantGrove(groveData) {
 >   // ...etc
->   // list of new trees
 >   return grove;
 > }
 > // ...etc
 > ```
 
-Building these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
+Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
 
 The **module pattern** arose from this need and allows these ***modules*** to be *exported* from their files and *imported* into multiple files.
+> Example tree.js
+> ```js
+> export class tree {...}
+> export const plantGrove(...) {...}
+> // ...etc
+> ```
+> Example veryLongClassName.js
+> ```js
+> class veryLongClassName {...}
+> const veryLongHelperName(...) {...}
+> // ...etc
+> export {
+>   veryLongClassName as shorterClassName,
+>   veryLongHelperName as shorterHelperName,
+>   // ...etc
+> }
+> ```
+> myProgram.js
+> ```js
+> // The top of the file
+> import tree from '/path-to-file/tree.js';
+> // ...etc
+> // Usage
+> const myTree = new tree(...);
+> const nearbyGrove = plantGrove(...);
+> // ...etc
+> ```
+#### Don't fix what isn't broken
 
-### Seeing the forest through the trees
+---
+## Seeing the forest through the trees
 
-Whether or not you're adhering to my specific set of coding practices, you can see how I've outlined that spotting a pattern can save you a lot of work by _using_ these objects and functions to re-use the work you've done, and naming conventions can help _understanding_ the work you've done, and yet there is still all that time spent _designing_ and _developing_ these things.  What if it were the case, though, that someone else has already went through all the effort to create that _something_ that has all the functionality that you want to implement?  The obvious temptation would be to use what was already created--extending the scope of the philosophy of DRY to include others' work--but the challenge would be gaining access to it if it weren't a common problem, for an obscure functionality would be inherently much harder to find.
+Whether or not you're adhering to my set of coding practices you can see how I've outlined that spotting a pattern can save you a lot of time by *reusing* them and can even help to *understand* the work you've done.
 
-In the case when many people come to the same or similar solution for the same problem, we call the _form_ of that solution a "design pattern" and are generally regarded as the most efficient, and thereby elegant, implementations of that particular functionality.  Two examples of _this_ that I now have personal experience in working with is the Publish/Subscribe pattern and the join pattern in Meteor, "a full-stack JavaScript platform for developing modern web and mobile applications."
+There still requires the work of both *optimizing* how it works and *designing* the ways that they're utilized or interacted with.
 
+What if it were the case, though, that someone else has already went through all the effort to optimize your idea, and perhaps already figured out the proper ways to interact with it?
+
+The natural temptation would be to use what was already created, thereby extending the scope of the philosophy of DRY to encompass *everyone's* work.
+
+### Pattern-seeking
+
+The obvious challenge is gaining access to it if these works were not *common* problems, for an obscure functionality would be inherently much harder to find.
+
+In the case when many people create the same shapes of *objects*--or classes--with the same *functionalities*--and methods--for the same *purposes*, we refer to that repeating *form* as a *design pattern*.
+
+A **design pattern** is a special type of concept that combines the best-practices, or the common standards, at every level of the program, object, or functions, and have already been optimized to a *currently* un-improvable level.
+
+Two examples of design patterns that I now have personal experience with is the Publish/Subscribe pattern and the join pattern implemented in [**Meteor-React**](https://guide.meteor.com/react.html), "a full-stack JavaScript platform for developing modern web and mobile applications."
+
+---
 #### The great wall
 
 The Publish/Subscribe pattern addresses the problem of segregating user activity from the database.  The brilliance of the pattern allows for full flexibility of the definitions of the data objects to be held inside the database--each different type of object being a part of a "collection" or list for that specific object-type, called a "document" in this context--which means I can have many collections for any conceivable object.  Using this pattern allows me to dictate which of those objects are available to the user, and when and how they can access it, all while keeping the user from _directly_ interacting with it by allowing them to "clone" certain sections of the collection to a new one that that specific user can see.  This allows for many people to access the database without having any one person tying it up, and allows everyone to see their specific requested set of data.   I can only imagine implementing this type of thing with the greatest of dread and foreboding and I don't even know how it's implemented but is still usable by me.
