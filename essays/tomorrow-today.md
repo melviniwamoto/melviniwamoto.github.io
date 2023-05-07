@@ -27,65 +27,110 @@ When programming in javascript, we have a unique opportunity to create these inn
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
 
-    sky = blue;
-    rain = likely;
-    ...
-    if (sky === blue) {
-        rain = notLikely;
-    } else {
-        rain = possible;
-    }
-    ...rain is changed to notLikely...
-    ...
-    ...perhaps later it is written again...
-    ...
+> ```js
+> const hourlyWage = 15;
+> // 20 hours a week
+> let weeklyIncome = 20 * hourlyWage;
+> // 50 weeks in a year
+> let yearlyIncome = 50 * weeklyIncome;
+> // ...Do Other stuff...
+> weeklyIncome = 40 * hourlyWage;
+> yearlyIncome = 50 * weeklyIncome;
+> // ...Change things and do it yet again...
+> ```
+When we see a repeating set of tasks being performed on pieces of data we like to group them up into nice little packages that we call **functions**.
+> ```js
+> const performSpecificTask = (whatItNeeds) => {
+>   // ...mysterious implementation...
+>   // ...complex operation on data...
+>   return whatYoudExpect;
+> }
+> ```
 
-When we see a repeating set of tasks being performed on pieces of data we like to group them up into nice little packages that we "define" called **functions**.
+Defining these functions with *semantic* names, or names that describe what it does, is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context to it's purpose.
 
-    myFunction = (skyData) => {
-        ...determine rain likelyhood...
-    }
+> ```js
+> const pickOutfit = (wardrobe, stars, ...etc) => {
+>   let chanceOfRain = askAstrologer(stars);
+>   const coat = chooseCoat(chanceOfRain, wardrobe);
+>   // More sets of commonly-grouped function
+>   const outfit = { coat, ...etc };
+>   return outfit;
+> }
+> ```
 
-Defining these functions with overly-descriptive names is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context to it's purpose.
-
-    performSpecificTask = (data) => {
-        ...mysterious...
-        ...complexity...
-    }
-
-*Sets* of functions can also repeat so we then create higher-order functions, and so-on, to keep a high standard of readability of our work.
-
-    dressAppropriately = (sky, clothes) => {
-        chanceOfRain = askAstrologer(sky);
-        coat = chooseCoat(chanceOfRain, clothes);
-        chooseShirt(isWorkingToday(), clothes);
-        ...etc..
-    }
+*Sets* of functions can also repeat so we then create higher-level functions, and so-on.
 
 ### Spotting the trees in the forest
 
-    treeSizeA = 30;
-    treeAgeA = 20;
-    treeSizeB = 32;
-    treeAgeB = 26;
+Collecting repeating and related sets of *data* into a new entity is called **object creation**.
 
-The result of applying facade on sets of *data* is called **objects** and is an old idea in programming.
+> ```js
+> const treeHeightA = 19;
+> const treeAgeA = 14;
+> const treeHeightB = 34;
+> const treeAgeB = 22;
+> // etc...
+> // The data grouped up as an object
+> const treeA = {
+>   height: 19,
+>   age: 14
+> }
+> // ...etc
+> ```
 
-    tree = {
-        name: A,
-        size: 30,
-        age: 20,
-    }
+The result of applying facade to identical *types* of objects is called *classes* and represent the central philosophy behind *Object-Oriented Programming*.
 
+The **Class** hides the unwieldy creation of these objects behind a special type of *function* called a **Constructor**.
 
+> ```js
+> class tree {
+>   // Hidden behind the class
+>   constructor (height, age, ...etc) {
+>       this.height = height;
+>       this.age = age;
+>       // ...etc
+>   }
+>   // ...etc
+> }
+> // Cleaner object-creation elsewhere
+> const treeA = new tree(19, 14, ...etc);
+> // ...etc
+> ```
 
-These objects have the ability to *perform* certain functions; a tree might have a *grow* function that adds to it's size and age.
+These objects perform a variable amount of functions; a tree might have a vast amount of functions including a *grow* function that adds to it's size and age.
 
-These functions related to objects are called **methods**.
+Functions relating to changing specific objects of classes are called **methods** and include the *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to somehow interact with it.
 
-Separating these functions and objects into their own files is called the ***module* pattern** and allows them to be imported into *multiple* files and ensures that they aren't changed over-time so that there aren't many of them with the same names that do different things.
+> ```js
+> class tree {
+>   constructor (...etc) {
+>       // ...etc
+>   }
+>   // Methods
+>   acceptHug(treeHugger) {
+>       this.friends.push(treeHugger);
+>       return this.deepConnection;
+>   }
+>   // ...etc
+> }
+> // Helper-Methods
+> const plantGrove(...etc) {
+>   // list of new trees
+>   const grove;
+>   // ...etc
+>   return grove;
+> }
+> // ...etc
+> ```
 
-The module is perhaps one of the most useful design patterns that I've come across so far because of how much it improves the readability of my work.
+All of the building complexity of combining these patterns naturally crowds the file--sometimes even before the class can be used--and working with *two* classes in the same file could be a nightmare to read.
+
+Separating these classes and related methods--and related sub-objects and functions--into their *own* files is called the *module pattern*.
+
+The **module pattern** allows these ***modules*** to be exported from their files and imported into *multiple* files, greatly improving the readability of the files that actually use them and allowing those files to focus on it's own responsibilities.
+
+## FIX BELOW
 
 #### _Not_ more than meets the eye!
 
