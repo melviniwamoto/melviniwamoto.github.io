@@ -166,8 +166,8 @@ This concept is called **loose-coupling** and allows the programmer to focus on 
 *person.js*
 ```diff
   constructor(...) {...}
--  hugTree(tree) {...}
-+  hugEverything(something) {...}
+-  hug(tree) {...}
++  hug(anything) {...}
 }
 ```
 
