@@ -61,7 +61,7 @@ Defining these functions with *semantic* names, or names that describe what it d
 
 *Sets* of functions can also repeat so we then create higher-level functions, and so-on.
 
-### Naming the trees in the forest
+### Seeing the trees in the forest
 
 Collecting repeating and related sets of *data* into a new entity is called **object creation**.
 
@@ -145,6 +145,7 @@ The **module pattern** arose from this need and allows these ***modules*** to be
 >   // ...etc
 > }
 > ```
+
 > myProgram.js
 > ```js
 > // The top of the file
@@ -156,6 +157,19 @@ The **module pattern** arose from this need and allows these ***modules*** to be
 > // ...etc
 > ```
 #### Don't fix what isn't broken
+As a result of segregation, the *module* is also protected from change; this enforces a stable expectation of it's purpose and functionality.
+
+This concept is called **loose-coupling** and allows the programmer to focus on integration *where* these modules interact rather than implementing interaction *inside* of them and tying objects together.
+
+> person.js
+> ```js
+> class person {
+>   constructor(...) {...}
+>   <del>hugTree(tree);</del>
+> }
+> export const plantGrove(...) {...}
+> // ...etc
+> ```
 
 ---
 ## Seeing the forest through the trees
