@@ -40,9 +40,8 @@ The first time many of us are made to be aware of this, in our specific context,
 > ```
 When we see a repeating set of tasks being performed on pieces of data we like to group them up into nice little packages that we call **functions**.
 > ```js
-> const performSpecificTask = (whatItNeeds) => {
->   // ...mysterious implementation...
->   // ...complex operation on data...
+> const performTasks = (whatItNeeds) => {
+>   // ...esoteric operations...
 >   return whatYoudExpect;
 > }
 > ```
@@ -52,9 +51,8 @@ Defining these functions with *semantic* names, or names that describe what it d
 > ```js
 > const pickOutfit = (wardrobe, stars, ...etc) => {
 >   let chanceOfRain = askAstrologer(stars);
->   const coat = chooseCoat(chanceOfRain, wardrobe);
->   // More sets of commonly-grouped function
->   const outfit = { coat, ...etc };
+>   chooseCoat(chanceOfRain, wardrobe);
+>   // ...etc
 >   return outfit;
 > }
 > ```
