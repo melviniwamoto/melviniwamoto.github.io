@@ -61,7 +61,7 @@ Defining these functions with *semantic* names, or names that describe what it d
 
 *Sets* of functions can also repeat so we then create higher-level functions, and so-on.
 
-### Spotting the trees in the forest
+### Naming the trees in the forest
 
 Collecting repeating and related sets of *data* into a new entity is called **object creation**.
 
@@ -79,7 +79,7 @@ Collecting repeating and related sets of *data* into a new entity is called **ob
 > // ...etc
 > ```
 
-The result of applying facade to identical *types* of objects is called *classes* and represent the central philosophy behind *Object-Oriented Programming*.
+The result of applying facade to identical *types* of objects is called *classes* and encapsulates the central philosophy behind *Object-Oriented Programming*.
 
 The **Class** hides the unwieldy creation of these objects behind a special type of *function* called a **Constructor**.
 
@@ -98,9 +98,11 @@ The **Class** hides the unwieldy creation of these objects behind a special type
 > // ...etc
 > ```
 
-These objects perform a variable amount of functions; a tree might have a vast amount of functions including a *grow* function that adds to it's size and age.
+These objects perform a variable amount of functions; a tree might have a vast amount of functions, including a *grow* function that adds to it's height and age.
 
-Functions relating to changing specific objects of classes are called **methods** and include the *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to somehow interact with it.
+Functions relating to changing the data of classes are called **methods**.
+
+These include *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to interact with it.
 
 > ```js
 > class tree {
@@ -116,27 +118,16 @@ Functions relating to changing specific objects of classes are called **methods*
 > }
 > // Helper-Methods
 > const plantGrove(...etc) {
->   // list of new trees
->   const grove;
 >   // ...etc
+>   // list of new trees
 >   return grove;
 > }
 > // ...etc
 > ```
 
-All of the building complexity of combining these patterns naturally crowds the file--sometimes even before the class can be used--and working with *two* classes in the same file could be a nightmare to read.
+Building these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
 
-Separating these classes and related methods--and related sub-objects and functions--into their *own* files is called the *module pattern*.
-
-The **module pattern** allows these ***modules*** to be exported from their files and imported into *multiple* files, greatly improving the readability of the files that actually use them and allowing those files to focus on it's own responsibilities.
-
-## FIX BELOW
-
-#### _Not_ more than meets the eye!
-
-We humans have a desire and a drive to make things better and/or faster and/or automated.  The benefits of these things are obvious and we live in a world where a phone might not be used to perform it's _primary_ task of making a call, but rather to primarily perform _other_ tasks, yet in programming we like to limit our functions and objects to only do what it _says_ it is going to do and when there is a further need we just make new functions or objects.  We want our objects to be completely self-sustaining so that there isn't some _other_ object performing critical functions on it, nor does it itself perform the critical functions of another.  Furthermore, we don't want our objects to possess or rely on another's data, and we preferably don't want them to have intersecting or overlapping functionality either.
-
-This concept is known as "loose coupling" and is another useful paradigm that is built around the expectation that any changes to any object should have no affect on any other.  A previously popular design pattern was in direct contradiction to this idea, which posited that objects should "extend" other simpler or smaller objects.  For example, a "shape" object with a "position" data would extend itself to a "square" with an additional "width" data or a "circle" with a "radius".  This, of course, could cause problems if the "parent" object did something that the "child" object didn't know would happen, or if the "parent" object was changed to exclude data that the "child" object relied upon, or could even lead to a seemingly unnavigable hierarchy structure of what is referred to as "inheritance".
+The **module pattern** arose from this need and allows these ***modules*** to be *exported* from their files and *imported* into multiple files.
 
 ### Seeing the forest through the trees
 
