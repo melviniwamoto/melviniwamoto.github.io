@@ -27,7 +27,7 @@ In the context of *work* the prospect of repeating the same laborious tasks over
 When programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating patterns.
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
-> Typical case of repeating patterns:
+> *Typical case of repeating patterns:*
 > ```js
 > const hourlyWage = 15;
 > // 20 hours a week
@@ -40,7 +40,8 @@ The first time many of us are made to be aware of this, in our specific context,
 > // ...Change things and do it yet again...
 > ```
 When we see a repeating set of tasks being performed on, or using, pieces of data we like to group them up into nice little packages that we call **functions**.
-> Format of a function:
+
+> *Format of a function:*
 > ```js
 > const functionName = (whatItNeeds) => {
 >   // ...esoteric operations...
@@ -61,6 +62,7 @@ Defining these functions with *semantic* names, or names that describe what it d
 
 *Sets* of functions can also repeat so we then create higher-level functions, and so-on.
 
+---
 ### Seeing the trees in the forest
 
 Collecting repeating and related sets of *data* into a new entity is called **object creation**.
@@ -165,7 +167,7 @@ This concept is called **loose-coupling** and allows the programmer to focus on 
 ```js
 class person {
   constructor(...) {...}
-  <del>hugTree(tree);</del>
+  ~~hugTree(tree) {...}~~
 }
 export const plantGrove(...) {...}
 // ...etc
