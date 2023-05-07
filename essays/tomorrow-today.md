@@ -164,14 +164,13 @@ As a result of segregation, the *module* is also protected from change; this enf
 This concept is called **loose-coupling** and allows the programmer to focus on integration *where* these modules interact rather than implementing interaction *inside* of them and tying objects together.
 
 *person.js*
-```js
-class person {
+```diff
   constructor(...) {...}
-  ~~hugTree(tree) {...}~~
+-  hugTree(tree) {...}
++  hugEverything(something) {...}
 }
-export const plantGrove(...) {...}
-// ...etc
 ```
+
 
 ---
 ## Seeing the forest through the trees
