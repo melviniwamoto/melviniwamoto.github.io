@@ -27,6 +27,7 @@ In the context of *work* the prospect of repeating the same laborious tasks over
 When programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating patterns.
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
+
 > *Typical case of repeating patterns:*
 > ```js
 > const hourlyWage = 15;
@@ -39,7 +40,7 @@ The first time many of us are made to be aware of this, in our specific context,
 > yearlyIncome = 50 * weeklyIncome;
 > // ...Change things and do it yet again...
 > ```
-When we see a repeating set of tasks being performed on, or using, pieces of data we like to group them up into nice little packages that we call **functions**.
+When we see a repeating set of tasks being performed on or with specific pieces of data we like to group them up into nice little packages that we call **functions**.
 
 > *Format of a function:*
 > ```js
@@ -56,6 +57,7 @@ Defining these functions with *semantic* names, or names that describe what it d
 >   let chanceOfRain = askAstrologer(stars);
 >   chooseCoat(chanceOfRain, wardrobe);
 >   // ...etc
+>   // combine into outfit
 >   return outfit;
 > }
 > ```
@@ -81,9 +83,11 @@ Collecting repeating and related sets of *data* into a new entity is called **ob
 > // ...etc
 > ```
 
-The result of applying facade to identical *types* of objects is called *classes* and encapsulates the central philosophy behind *Object-Oriented Programming*.
+The result of applying facade to object creation is called *classes* and encapsulates the central philosophy behind *Object-Oriented Programming*.
 
-The **Class** hides the unwieldy creation of these objects behind a special type of *function* called a **Constructor**.
+The **Class** hides the unwieldy creation of objects behind a special type of *function* called a **Constructor**.
+
+*Example Class:*
 
 > ```js
 > class tree {
@@ -95,23 +99,25 @@ The **Class** hides the unwieldy creation of these objects behind a special type
 >   }
 >   // ...etc
 > }
-> // Cleaner object-creation elsewhere
+> // Cleaner object-creation afterward
 > const treeA = new tree(19, 14, ...etc);
 > // ...etc
 > ```
 
-These objects perform a variable amount of functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
+Objects can perform a variable amount of functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
 
-Functions relating to changing the data of objects of a class are called **methods**.
+Functions relating to changing the content of the data of *objects of a class* are called **methods**.
 
-These include *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to interact with it.
+These include *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to somehow interact with them.
+
+*Example Methods:*
 
 > ```js
 > class tree {
 >   constructor (...) {...}
 >   // Methods
 >   // Accept a hug
->   hug(huggerName) {
+>   getHug(huggerName) {
 >       // Add to list
 >       this.friends.push(huggerName);
 >       // ...etc
@@ -129,26 +135,31 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 
 Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
 
-The **module pattern** arose from this need and allows these ***modules*** to be *exported* from their files and *imported* into multiple files.
-> *Example tree.js*
+The **module pattern** presumably arose from this need and allows these ***modules*** to be *exported* from their files and *imported* into multiple files.
+
+Exporting *tree.js*:
+
 > ```js
 > export class tree {...}
 > export const plantGrove(...) {...}
 > // ...etc
 > ```
-> Example veryLongClassName.js
+
+Exporting *veryLongClassName.js*:
+
 > ```js
 > class veryLongClassName {...}
 > const veryLongHelperName(...) {...}
 > // ...etc
 > export {
->   veryLongClassName as shorterClassName,
->   veryLongHelperName as shorterHelperName,
+>   veryLongClassName as shortClassName,
+>   veryLongHelperName as shortHelperName,
 >   // ...etc
 > }
 > ```
 
-> *myProgram.js*
+Importing into *myProgram.js*:
+
 > ```js
 > // The top of the file
 > import tree from '/path-to-file/tree.js';
@@ -158,19 +169,90 @@ The **module pattern** arose from this need and allows these ***modules*** to be
 > const nearbyGrove = plantGrove(...);
 > // ...etc
 > ```
+
 #### Don't fix what isn't broken
-As a result of segregation, the *module* is also protected from change; this enforces a stable expectation of it's purpose and functionality.
 
-This concept is called **loose-coupling** and allows the programmer to focus on integration *where* these modules interact rather than implementing interaction *inside* of them and tying objects together.
+An intended side-effect of segregating the module is that it becomes protected from any temptation to *change* it across it's uses; providing fixed and understandable expectations from them and forcing us to use them *as-is*.
 
-*person.js*
+```js
+const doThis(...) {
+```
 ```diff
-  constructor(...) {...}
--  hug(tree) {...}
-+  hug(anything) {...}
+- // does "this"
++ // does "that"
+```
+```js
 }
 ```
 
+The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both frequently act together.
+
+*Coupling* classes, however, can lead to a situation where they overly-rely on each other, causing simple mistakes to have unwanted and hard-to-find and sometimes-dangerous consequences.
+
+*Simple mistake:*
+
+```js
+class foot {
+  constructor(...) {
+    this.leg = new leg(...);
+    // ...etc
+  }
+  // Methods that rely on leg data
+  // ...etc
+}
+```
+
+```js
+class leg {
+  constructor(...) {
+    this.foot = new foot(...);
+    // ...etc
+  }
+  // Methods that rely on foot data
+  // ...etc
+}
+```
+
+```js
+import leg from '/path/leg.js';
+// NO "errors" in compilation
+const leg = new leg(...);
+// but making a foot or leg results in
+// an endless loop, or recursion, of NEW objects
+// probably using up all system resources
+// and causing annoying "locks" or crashes
+```
+
+
+
+These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than implicitly integrating it *inside* of them.
+
+*tree.js* Class definition:
+
+```diff
+  constructor(...) {...}
+  // Perhaps aliens hug trees as well
+- hugPerson(personObject) {...}
+- hugAlien(alienObject) {...}
++ hug(genericObject) {...}
+  // Or even better...
++ hug(genericPieceOfData) {...}
+  // ...etc
+```
+
+Preserving the class' generic state maximizes it's possible usage, preventing the need to create *mostly*-identical classes or methods to interact with different objects.
+
+
+
+Tying *certain* classes of objects together can seem intuitive until you consider the broader need to relate *types* of object classes together for different *purposes*.
+
+The legs of *tables* are not attached to a table's *hip-socket* and, to spare us the horror, should not be *implicitly* tied to one.
+
+But then again, you might rather use a different *type* of leg by creating a new class when the usage, context, or underlying-data are significantly different.
+
+ implicitly when they're *very* similar by including an identifying piece of data during it's creation.
+
+This keeps the flexibility of each individual object in-tact while still being able to represent ever-more complex objects.
 
 ---
 ## Seeing the forest through the trees
