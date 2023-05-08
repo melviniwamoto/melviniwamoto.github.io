@@ -89,7 +89,7 @@ The **Class** hides the unwieldy creation of objects behind a special type of *f
 *Example Class:*
 
 > ```js
-> class tree {
+> class Tree {
 >   // Hidden behind the class
 >   constructor (height, age, ...etc) {
 >       this.height = height;
@@ -99,7 +99,7 @@ The **Class** hides the unwieldy creation of objects behind a special type of *f
 >   // ...etc
 > }
 > // Cleaner object-creation afterward
-> const treeA = new tree(19, 14, ...etc);
+> const treeA = new Tree(19, 14, ...etc);
 > // more trees...etc
 > ```
 
@@ -112,7 +112,7 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 *Example Methods:*
 
 > ```js
-> class tree {
+> class Tree {
 >   constructor (...) {...}
 >   // Methods
 >   // Accept a hug
@@ -131,8 +131,8 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 > }
 > // helpers...etc
 > // Finally using them far below
-> const myTree = new tree(...);
-> const neighborsTree = new tree(...);
+> const myTree = new Tree(...);
+> const neighborsTree = new Tree(...);
 > const nearbyGrove = plantGrove(...);
 > ```
 
@@ -143,7 +143,7 @@ The **module pattern** presumably arose from this need and allows these ***modul
 Exporting *tree.js*:
 
 > ```js
-> export class tree {...}
+> export class Tree {...}
 > export const plantGrove(...) {...}
 > // helpers...etc
 > ```
@@ -151,11 +151,11 @@ Exporting *tree.js*:
 Exporting *veryLongClassName.js*:
 
 > ```js
-> class veryLongClassName {...}
+> class VeryLongClassName {...}
 > const veryLongHelperName(...) {...}
 > // ...etc
 > export {
->   veryLongClassName as shortClassName,
+>   VeryLongClassName as ShortClassName,
 >   veryLongHelperName as shortHelperName,
 >   // ...etc
 > }
@@ -165,11 +165,9 @@ Importing into *myProgram.js*:
 
 > ```js
 > // The top of the file
-> import tree from '/path-to-file/tree.js';
+> import Tree from '/path-to-file/Tree.js';
 > // interact with user...etc
-> // Usage
-> const myTree = new tree(...);
-> const nearbyGrove = plantGrove(...);
+> const myTree = new Tree(...);
 > // ...etc
 > ```
 
@@ -193,11 +191,11 @@ The power wielded when actively developing a program can tempt us to intertwine 
 *Coupling* classes, however, can lead to a situation where simple mistakes can cause unwanted, confusing, hard-to-find, and sometimes-dangerous consequences.
 
 ```js
-class foot {
+class Foot {
   constructor(...) {
     // creates a new object
-    this.leg = new leg(...);
-    // foot data
+    this.leg = new Leg(...);
+    // Foot data
   }
   // many methods that rely on,
   // and change, leg data
@@ -205,10 +203,10 @@ class foot {
 ```
 
 ```js
-class leg {
+class Leg {
   constructor(...) {
     // creates a new object
-    this.foot = new foot(...);
+    this.foot = new Foot(...);
     // leg data
   }
   // many methods that rely on,
@@ -219,26 +217,27 @@ class leg {
 *Simple mistakes that built-up over-time:*
 
 ```js
-import leg from '/path/leg.js';
+import Leg from '/path/Leg.js';
 // NO "errors" in compilation
-const leftLeg = new leg(...);
+const leftLeg = new Leg(...);
 // ---Endless loop, or recursion, of NEW objects
 // using up system resources and causing crashes
+// ---Also a redundant use of memory in intended
+// implementation: a leg's this.foot.leg is itself
 const hokeyPokey = (...) {
-  leftLeg.putOut();
+  leftLeg.shakeItAllAbout();
   // ...etc
 }
-// ---In big enough classes, finding bugs inside
-// complex method calls can seem almost impossible,
-// especially if changes come from the "outside"
 ```
 
-Ultimately it is an imperative for our own benefit to head-off frustration because changes to any strongly-coupled object requires that it's reflected on the other.
+In big enough classes, finding bugs inside complex method calls can be nearly impossible, especially if changes are hidden by coming from *outside* the object.
+
+Ultimately, it is an imperative for our *own* benefit to head-off frustration because changes to any strongly-coupled object tend to need to be reflected on both.
 
 Preserving the class' generic state also maximizes it's usage while preventing the need to create *mostly*-identical classes or methods to interact with specific objects.
 
 ```diff
-export class tree {
+export class Tree {
   constructor(...) {...}
   // keep methods generalized
 - getPersonHug(personObject) {...}
@@ -246,11 +245,34 @@ export class tree {
 + getHug(objectOfAffection) {...}
 ```
 
+These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than *inside* each object.
+
+When it is *indeed* natural to link several objects together, which often is the case, it is better to create a higher-level object or class that are *composed* of other objects or class-objects.
+
+```js
+export class Vehicle {
+  constructor(...) {
+    // =Sub-classes=
+    this.engine = new engine(...);
+    this.frontLeftWheel = new wheel(...);
+    // ...etc
+    // =Class data=
+    // ...etc
+  }
+  // Methods
+  accelerate(...) {
+    if (this.speed === 88) {
+      this.fluxCapacitor.powerUp('juice');
+    }
+    // ...etc
+  }
+  // ...etc
+}
+```
+
 ---
 
 The legs of *tables* are not attached to a table's *hip-socket* and, to spare us the horror, should not be *implicitly* tied to one.
-
-These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than *inside* of the objects themselves.
 
 Tying *certain* classes of objects together is indeed intuitive but considering the broader need to relate *types* of object classes together for different *purposes*.
 
