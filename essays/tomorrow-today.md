@@ -9,7 +9,7 @@ labels:
 - javascript
 - Meteor
 ---
-### Speaking in tongues
+#### Speaking in tongues
 
 Understanding others can be troublesome when there are language barriers, but it can be even more pronounced if someone uses idioms you're unfamiliar with; "What do you mean the early bird catches the worm?  Which bird?"
 
@@ -103,7 +103,7 @@ The **Class** hides the unwieldy creation of objects behind a special type of *f
 > // more trees...etc
 > ```
 
-Objects can perform a variable amount of functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
+Objects can perform varying functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
 
 Functions devoted to changing the *content* of the data of **objects of a *class*** are called **methods**.
 
@@ -130,7 +130,7 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 >   return grove;
 > }
 > // helpers...etc
-> // Finally using them far below
+> // *Finally using them far below*
 > const myTree = new Tree(...);
 > const neighborsTree = new Tree(...);
 > const nearbyGrove = plantGrove(...);
@@ -154,6 +154,7 @@ Exporting *veryLongClassName.js*:
 > class VeryLongClassName {...}
 > const veryLongHelperName(...) {...}
 > // ...etc
+> // *Bottom of the file*
 > export {
 >   VeryLongClassName as ShortClassName,
 >   veryLongHelperName as shortHelperName,
@@ -180,143 +181,139 @@ An intended side-effect of segregating the module when it is complete is that it
 // A function that does "this"
 export const doThis(...) {
   // does "this"
-  // does "that"
+  // also does "that"
 }
-// without renaming or updating comments
+// without renaming and updating comments
 // usage may lead to confusing results
 ```
 
-The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both tend to act together, or to expand method functionality in an attempt to streamline and automate the processes.
+The power wielded when actively developing a program can tempt us to to expand method functionality or to intertwine classes that commonly interact in an attempt to streamline and automate processes.
 
-*Coupling* classes, however, can lead to a situation where simple mistakes can cause unwanted, confusing, hard-to-find, and sometimes-dangerous consequences.
+*Coupling objects*, however, can lead to asymmetrical responsibilities and hidden interactions that are hard to trace.
+
+*Strongly-coupled* objects:
 
 ```js
-class Foot {
-  constructor(...) {
-    // creates a new object
-    this.leg = new Leg(...);
-    // Foot data
+class Tail {
+  constructor(...) {...}
+  // Changes the data of other objects
+  wag(dogObject) {
+    // error trying to access method of a null object
+    dogObject.mind.boggle();
   }
-  // many methods that rely on,
-  // and change, leg data
-}
-```
-
-```js
-class Leg {
-  constructor(...) {
-    // creates a new object
-    this.foot = new Foot(...);
-    // leg data
-  }
-  // many methods that rely on,
-  // and change, foot data
-}
-```
-
-*Simple mistakes that built-up over-time:*
-
-```js
-import Leg from '/path/Leg.js';
-// NO "errors" in compilation
-const leftLeg = new Leg(...);
-// ---Endless loop, or recursion, of NEW objects
-// using up system resources and causing crashes
-// ---Also a redundant use of memory in intended
-// implementation: a leg's this.foot.leg is itself
-const hokeyPokey = (...) {
-  leftLeg.shakeItAllAbout();
   // ...etc
 }
 ```
 
-In big enough classes, finding bugs inside complex method calls can be nearly impossible, especially if changes are hidden by coming from *outside* the object.
+```js
+class Dog {
+  // Class data was changed over time
+  constructor(...) {...}
+  // Relies on data from a single input
+  chase(tailObject) {...}
+  // ...etc
+}
+```
 
-Ultimately, it is an imperative for our *own* benefit to head-off frustration because changes to any strongly-coupled object tend to need to be reflected on both.
+In big enough classes, finding bugs inside complex high-level method calls can be nearly impossible, especially if changes are coming from *outside*.
 
-Preserving the class' generic state also maximizes it's usage while preventing the need to create *mostly*-identical classes or methods to interact with specific objects.
+Ultimately, it is an imperative for our *own* benefit to head-off this frustration by preserving each class' generic state and to limit the level of their coupling.
+
+*tree.js* Class:
 
 ```diff
-export class Tree {
-  constructor(...) {...}
   // keep methods generalized
 - getPersonHug(personObject) {...}
 - getAlienHug(alienObject) {...}
 + getHug(objectOfAffection) {...}
 ```
 
-These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than *inside* each object.
-
-When it is *indeed* natural to link several objects together, which often is the case, it is better to create a higher-level object or class that are *composed* of other objects or class-objects.
+When it is *indeed* natural to link several objects together, which often is the case, it is better to either create a higher-level class that is *composed* of other classes or to *extend* classes.
 
 ```js
-export class Vehicle {
+import Engine from '/path/Engine.js';
+// ...etc
+class Vehicle {
   constructor(...) {
     // =Sub-classes=
-    this.engine = new engine(...);
-    this.frontLeftWheel = new wheel(...);
+    this.engine = new Engine(...);
+    this.frontLeftWheel = new Wheel(...);
     // ...etc
     // =Class data=
     // ...etc
   }
   // Methods
-  accelerate(...) {
-    if (this.speed === 88) {
-      this.fluxCapacitor.powerUp('juice');
-    }
+  drive(...) {
+    if (this.speed >= 88) {...}
+    if (this.fluxCapacitor >= 1.21) {...}
     // ...etc
   }
   // ...etc
 }
 ```
 
----
+**Composition** is a straightforward type of umbrella-object that **owns** the smaller parts of itself; like how a car **has** wheels and an engine.
 
-The legs of *tables* are not attached to a table's *hip-socket* and, to spare us the horror, should not be *implicitly* tied to one.
+Conversely, **Aggregation** implies either *extension* or *specification* of an object and specifically does *not* imply ownership; a truck **is** a vehicle, and a car **is** a vehicle, and neither **has** a vehicle.
 
-Tying *certain* classes of objects together is indeed intuitive but considering the broader need to relate *types* of object classes together for different *purposes*.
+```js
+import Chair from '/path/Chair.js';
+Bench extends Chair {...}
+Throne extends Chair {...}
+Toilet extends Throne {...}
+// ...etc
+```
 
+Aggregation and extension have an implicit functionality distinct from composition: the constructor of the extended **parent** class is called when the new **child** class' constructor is used, causing the child to **inherit** everything the parent *is* and *does*.
 
-But then again, you might rather use a different *type* of leg by creating a new class when the usage, context, or underlying-data are significantly different.
-
- implicitly when they're *very* similar by including an identifying piece of data during it's creation.
-
-This keeps the flexibility of each individual object in-tact while still being able to represent ever-more complex objects.
+```js
+import Tooth from '/path/Tooth.js';
+// ...etc
+Dinosaur extends Tetrapod {
+  constructor(...) {
+    // Parent gives it's data (from elsewhere)
+    // Use whats needed, make whats missing
+    this.jaw = fillTeeth(new Tooth('scary'));
+    // ...etc
+  }
+  // Parent gives it's methods
+  // Child methods are defined here
+  scareParkGoer(...) {...}
+  // ...etc
+}
+fossilize(...) {
+  // use deeply inherited data
+  const fossil = tryMakeFossil(dinosaur.body);
+  return new TestFromGod(fossil);
+}
+// ...etc
+```
 
 ---
 ## Seeing the forest through the trees
 
-Whether or not you're adhering to my set of coding practices you can see how I've outlined that spotting a pattern can save you a lot of time by *reusing* them and can even help to *understand* the work you've done.
+When we can be *absolutely* sure of the existence of a rigid set of functionalities--a bare *minimum* of capabilities--they are called **interfaces**.
 
-There still requires the work of both *optimizing* how it works and *designing* the ways that they're utilized or interacted with.
+A rigid set of attributes--symmetrical sets of data--are called **abstract classes** and can also have an interface;
 
-What if it were the case, though, that someone else has already went through all the effort to optimize your idea, and perhaps already figured out the proper ways to interact with it?
+Technically, javascript doesn't even explicitly support them and they aren't included as important keywords like **class** or **export** because objects in javascript can actually be transformed to satisfy interface and abstract requirements.
 
-The natural temptation would be to use what was already created, thereby extending the scope of the philosophy of DRY to encompass *everyone's* work.
+Simply conforming with "best-practices", however, at every level of development should always ideally result in the production of generically-composed, *abstract*, classes.
 
-### Pattern-seeking
+Development should cease when the classes either have sufficient data to represent the concept, or have sufficient methods to effectively simulate an act, to minimize the complexity in actually finally creating concrete objects of the class.
 
-The obvious challenge is gaining access to it if these works were not *common* problems, for an obscure functionality would be inherently much harder to find.
+```js
+const name = 'batman';
+// Done! Only needed a name
+```
 
-In the case when many people create the same shapes of *objects*--or classes--with the same *functionalities*--and methods--for the same *purposes*, we refer to that repeating *form* as a *design pattern*.
+But implementing specific types of complex classes can become a lot to manage, and repetitive, when many parts of it need to be configured in specifically different ways; like how various *breeds* of dogs have distinct *forms* though they've remained the same *species*.
 
-A **design pattern** is a special type of concept that combines the best-practices, or the common standards, at every level of the program, object, or functions, and have already been optimized to a *currently* un-improvable level.
+You could end up with *nearly*-identical helper-methods that all use the same sets of data in different ways or combinations 
 
-Two examples of *these* design patterns that I now have personal experience with is the Publish/Subscribe pattern and the join pattern implemented in [**Meteor-React**](https://guide.meteor.com/react.html), "a full-stack JavaScript platform for developing modern web and mobile applications."
-
----
-#### The great wall
-
-The Publish/Subscribe pattern addresses the problem of segregating user activity from the database.  The brilliance of the pattern allows for full flexibility of the definitions of the data objects to be held inside the database--each different type of object being a part of a "collection" or list for that specific object-type, called a "document" in this context--which means I can have many collections for any conceivable object.  Using this pattern allows me to dictate which of those objects are available to the user, and when and how they can access it, all while keeping the user from _directly_ interacting with it by allowing them to "clone" certain sections of the collection to a new one that that specific user can see.  This allows for many people to access the database without having any one person tying it up, and allows everyone to see their specific requested set of data.   I can only imagine implementing this type of thing with the greatest of dread and foreboding and I don't even know how it's implemented but is still usable by me.
-
-#### The middle-man
-
-The join pattern, however, is somewhat more abstract and is at first unintuitive.  When thinking of how to relate two different objects in different collections the intuitive solution might be to store a piece of _referential_ data in each object that points to the other one or by adding a _shared_ data to both of them, promoting coupling.  For example, you may have a "dog" object and a "person" object and you may have a piece of data in "dog" called "owner" that points to the "person" who has a "pet" data that points back to the "dog" or you might have both "dog" and "person" have some shared "pet-owner-ID" data and if they both have the same value then you know that the dog and the owner are related.
-
-The problem with the additional data approach arises, as with inheritance, when you make changes to an object, or when you try to verify data.  In the case of the referential data, changes to one of the objects must be reflected by the other--if dog.owner changes then person.pet must change as well--and the problem only becomes larger when you want another relationship because each of the objects _themselves_ must grow in size _by design_, so that if the person got another dog then the "pet" data would contain more and more pets for that person.  In the case of the shared data, you might get a case where a "dog" might be evaluated as the owner of another "dog" when really that "person" has two dogs, and again, any change to the relationship must be performed on _two_ objects.
-
-The elegant solution to the problem exists in creating a third object-type, for example a "dogPerson" that relates or "joins" the two different objects.  Each dog and person could have a "name" data--called a _key_ when that data uniquely identifies each in its own collection--and storing them both in that join object as references to both.  In this way, searching in the join collection can point to both and removing the relation is done on a single object.  Furthermore, the join can contain additional data about that relationship, so a dog with a name "Spot", and two persons, one with the name "John" and the other with the name "Mail-man", resulting in two join documents both sharing dogPerson.dog value while having different dogPerson.person values and different dogPerson.relationship values.  You can then search _two_ collections, by relationship, person, or dog, all from looking at _one_ collection.
-
-### Standing on the shoulders of giants
-
-These types of amazing solutions for common problems are not only incredibly valuable for the amount of time saved but have also been enlightening and inspiring in my brief time working with it and I doubt I could have come up with things that work as well as them.  For me, most of the design patterns I've read about don't come close to being as easily understandable as the ones I've identified, and they aren't named as intuitively as I like them to be, but then again I haven't yet been forced to work with them or to need their functionality.  These, however, support and parallel the other paradigms that I use to enable my coming back and being easily able to resume an unfinished and perhaps forgotten programming task after an extended period away.  I will try to incorporate and emulate these patterns, especially basic ones like module encapsulation, for the immense benefit of being able to speak to myself in a way that I can understand.
+```js
+class Tree {...}
+// helper-methods
+const treePlanter ()
+```
+### EXPLAIN FACTORY
