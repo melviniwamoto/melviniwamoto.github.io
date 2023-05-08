@@ -176,21 +176,21 @@ Importing into *myProgram.js*:
 ---
 ### *Not* more than meets the eye
 
-An intended side-effect of segregating the module is that it becomes protected from any temptation to *transform* it across it's uses; providing fixed and understandable expectations from them and forcing us to use them *as-is*.
+An intended side-effect of segregating the module when it is complete is that it becomes protected from any temptation to *transform* it across it's uses; providing fixed and understandable expectations from them and forcing us to use them *as-is*.
 
-```diff
+```js
 // A function that does "this"
 export const doThis(...) {
-- // does "this"
-+ // does "this" and "that"
+  // does "this"
+  // does "that"
 }
 // without renaming or updating comments
 // usage may lead to confusing results
 ```
 
-The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both tend to act together, in an attempt to streamline and automate the process.
+The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both tend to act together, or to expand method functionality in an attempt to streamline and automate the processes.
 
-*Coupling* classes, however, can lead to a situation where simple mistakes can cause unwanted and hard-to-find--and sometimes dangerous--consequences.
+*Coupling* classes, however, can lead to a situation where simple mistakes can cause unwanted, confusing, hard-to-find, and sometimes-dangerous consequences.
 
 ```js
 class foot {
@@ -235,7 +235,7 @@ const hokeyPokey = (...) {
 
 Ultimately it is an imperative for our own benefit to head-off frustration because changes to any strongly-coupled object requires that it's reflected on the other.
 
-Preserving the class' generic state also maximizes it's usage while preventing the need to create *mostly*-identical classes or methods to interact with different objects.
+Preserving the class' generic state also maximizes it's usage while preventing the need to create *mostly*-identical classes or methods to interact with specific objects.
 
 ```diff
 export class tree {
@@ -244,7 +244,6 @@ export class tree {
 - getPersonHug(personObject) {...}
 - getAlienHug(alienObject) {...}
 + getHug(objectOfAffection) {...}
-}
 ```
 
 ---
@@ -281,7 +280,7 @@ In the case when many people create the same shapes of *objects*--or classes--wi
 
 A **design pattern** is a special type of concept that combines the best-practices, or the common standards, at every level of the program, object, or functions, and have already been optimized to a *currently* un-improvable level.
 
-Two examples of design patterns that I now have personal experience with is the Publish/Subscribe pattern and the join pattern implemented in [**Meteor-React**](https://guide.meteor.com/react.html), "a full-stack JavaScript platform for developing modern web and mobile applications."
+Two examples of *these* design patterns that I now have personal experience with is the Publish/Subscribe pattern and the join pattern implemented in [**Meteor-React**](https://guide.meteor.com/react.html), "a full-stack JavaScript platform for developing modern web and mobile applications."
 
 ---
 #### The great wall
