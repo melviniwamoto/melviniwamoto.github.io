@@ -50,7 +50,7 @@ When we see a repeating set of tasks being performed on specific types of data w
 > }
 > ```
 
-Defining these functions with *semantic* names, or names that describe what it does, is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context as to it's purpose.
+Declaring these functions with *semantic* names, or names that describe what it does, is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context as to it's purpose.
 
 > ```js
 > const pickOutfit = (wardrobe, stars, ...etc) => {
@@ -82,7 +82,7 @@ Collecting repeating and related sets of *data* into a new entity is called **ob
 > // more objects...etc
 > ```
 
-The result of applying facade to object creation is called *classes* and tidily encapsulates the central philosophy behind *Object-Oriented Programming*.
+The result of applying facade to object creation produces *classes* that tidily encapsulate the central philosophy behind *Object-Oriented Programming*.
 
 The **Class** hides the unwieldy creation of objects behind a special type of *function* called a **Constructor**.
 
@@ -135,6 +135,8 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 > const neighborsTree = new Tree(...);
 > const nearbyGrove = plantGrove(...);
 > ```
+
+Special helper-methods that aid in the creation of objects are called **Factory** methods, including the Constructor method already mentioned. 
 
 Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
 
@@ -215,20 +217,20 @@ class Dog {
 }
 ```
 
-In big enough classes, finding bugs inside complex high-level method calls can be nearly impossible, especially if changes are coming from *outside*.
+In big enough classes, finding bugs inside complex high-level method calls can be nearly impossible, especially if changes are coming from *outside*, and readability also tends to suffer because of the need to reference two or three files at-a-time. 
 
-Ultimately, it is an imperative for our *own* benefit to head-off this frustration by preserving each class' generic state and to limit the level of their coupling.
+Ultimately, it is an imperative for our *own* benefit to head-off this frustration by preserving each class' generic state as much as possible; this is called **loose-coupling**.
 
 *tree.js* Class:
 
 ```diff
-  // keep methods generalized
+  // keep methods generic
 - getPersonHug(personObject) {...}
 - getAlienHug(alienObject) {...}
 + getHug(objectOfAffection) {...}
 ```
 
-When it is *indeed* natural to link several objects together, which often is the case, it is better to either create a higher-level class that is *composed* of other classes or to *extend* classes.
+When it is *indeed* natural to link several objects together, which often can be the case, it is better to either create a higher-level class that is *composed* of other classes or to *extend* classes.
 
 ```js
 import Engine from '/path/Engine.js';
@@ -254,7 +256,7 @@ class Vehicle {
 
 **Composition** is a straightforward type of umbrella-object that **owns** the smaller parts of itself; like how a car **has** wheels and an engine.
 
-Conversely, **Aggregation** implies either *extension* or *specification* of an object and specifically does *not* imply ownership; a truck **is** a vehicle, and a car **is** a vehicle, and neither **has** a vehicle.
+Conversely, **Aggregation** implies either *extension* or *specification* of an object and specifically does *not* imply ownership; a truck **is** a vehicle, a car **is** a vehicle, and neither **has** a vehicle.
 
 ```js
 import Chair from '/path/Chair.js';
@@ -294,26 +296,41 @@ fossilize(...) {
 
 When we can be *absolutely* sure of the existence of a rigid set of functionalities--a bare *minimum* of capabilities--they are called **interfaces**.
 
-A rigid set of attributes--symmetrical sets of data--are called **abstract classes** and can also have an interface;
+Similarly, rigid sets of attributes--symmetrical sets of data--are called **abstract classes** and can also have related interfaces;
 
-Technically, javascript doesn't even explicitly support them and they aren't included as important keywords like **class** or **export** because objects in javascript can actually be transformed to satisfy interface and abstract requirements.
+Simply conforming with "best-practices", however, at every level of development, should always ideally result in the production of generically-composed *abstract* classes.
 
-Simply conforming with "best-practices", however, at every level of development should always ideally result in the production of generically-composed, *abstract*, classes.
+*Concretely* defining them to take a specific shape, consequently shedding it's generalities, can become a lot to manage when the many parts of it each require large sets of data to be configured in uniquely different ways.
 
-Development should cease when the classes either have sufficient data to represent the concept, or have sufficient methods to effectively simulate an act, to minimize the complexity in actually finally creating concrete objects of the class.
+Modeling various *breeds* of dogs--with distinct *shapes* though they remain the same *species*--could produce *nearly*-identical helper-methods for each distinctive breed's **shape**, and might even be nearly-identical to other species of the same *genus*.
 
-```js
-const name = 'batman';
-// Done! Only needed a name
-```
-
-But implementing specific types of complex classes can become a lot to manage, and repetitive, when many parts of it need to be configured in specifically different ways; like how various *breeds* of dogs have distinct *forms* though they've remained the same *species*.
-
-You could end up with *nearly*-identical helper-methods that all use the same sets of data in different ways or combinations 
+The **factory pattern** can be applied to consolidate the different factory *methods*, or class constructors, into a single function or object that handles the creation of *all* the concretely-defined "descendants" of an abstract class.
 
 ```js
-class Tree {...}
-// helper-methods
-const treePlanter ()
+class MeasuringStick extends Stick {...}
+// Factory-pattern method
+const rulerFactory (rulerType, data, ...) {
+  // method and interface are strongly-coupled
+  const yardStickData = {...}// MeasuringStick data
+  let measuringStick;
+  // build correct "descendent"
+  if (rulerType === 'yard-stick') {
+    measuringStick = new MeasuringStick(yardStickData);
+  }
+  // ...etc
+  if (nearSpeedOfLight(measuringStickData)) {
+    specialRelativity(measuringStick);
+  }
+  return measuringStick;
+}
+// Give it a way to identify _which_ type to make
+// and give it any more information it needs 
+const myYardStick = rulerFactory('yard-stick', '0.9c', ...);
 ```
-### EXPLAIN FACTORY
+
+---
+#### Pattern-seeking
+
+Whether or not you personally adhere to my specific set of applied *coding standards* and *design patterns* you can see how utilizing them can minimize the amount of frustration and time spend of development and can maximize efficiency and clarity of purpose.
+
+We all work in our own ways and modify our protocols to suit the context and to satisfy our needs but some *wants* remain constant--the desire to be understood and to understand *yourself*--and using these **design patterns** in programming is what helps *me*.
