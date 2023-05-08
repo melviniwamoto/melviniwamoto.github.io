@@ -24,7 +24,7 @@ This is why I try to provide enough context to myself, or anyone else for that m
 
 In the context of *work* the prospect of repeating the same laborious tasks over and over is what leads to innovation, like in the case of power tools.
 
-When programming in javascript, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating patterns.
+In programming, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating *patterns*.
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
 
@@ -40,7 +40,7 @@ The first time many of us are made to be aware of this, in our specific context,
 > yearlyIncome = 50 * weeklyIncome;
 > // ...Change things and do it yet again...
 > ```
-When we see a repeating set of tasks being performed on or with specific pieces of data we like to group them up into nice little packages that we call **functions**.
+When we see a repeating set of tasks being performed on specific types of data we like to group them up into nice little packages that we call **functions**.
 
 > *Format of a function:*
 > ```js
@@ -50,19 +50,18 @@ When we see a repeating set of tasks being performed on or with specific pieces 
 > }
 > ```
 
-Defining these functions with *semantic* names, or names that describe what it does, is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context to it's purpose.
+Defining these functions with *semantic* names, or names that describe what it does, is a type of *design pattern* called the ***Facade* pattern** because of how the complexity *behind* it is hidden by the name while still providing context as to it's purpose.
 
 > ```js
 > const pickOutfit = (wardrobe, stars, ...etc) => {
 >   let chanceOfRain = askAstrologer(stars);
 >   chooseCoat(chanceOfRain, wardrobe);
->   // ...etc
->   // combine into outfit
+>   // more functions...etc
 >   return outfit;
 > }
 > ```
 
-*Sets* of functions can also repeat so we then create higher-level functions, and so-on.
+*Sets* of functions can also repeat so we simply create higher-level functions, and so-on.
 
 ---
 ### Seeing the trees in the forest
@@ -74,16 +73,16 @@ Collecting repeating and related sets of *data* into a new entity is called **ob
 > const treeAgeA = 14;
 > const treeHeightB = 34;
 > const treeAgeB = 22;
-> // etc...
+> // more data...etc
 > // The data grouped up as an object
 > const treeA = {
 >   height: 19,
 >   age: 14
 > }
-> // ...etc
+> // more objects...etc
 > ```
 
-The result of applying facade to object creation is called *classes* and encapsulates the central philosophy behind *Object-Oriented Programming*.
+The result of applying facade to object creation is called *classes* and tidily encapsulates the central philosophy behind *Object-Oriented Programming*.
 
 The **Class** hides the unwieldy creation of objects behind a special type of *function* called a **Constructor**.
 
@@ -95,18 +94,18 @@ The **Class** hides the unwieldy creation of objects behind a special type of *f
 >   constructor (height, age, ...etc) {
 >       this.height = height;
 >       this.age = age;
->       // ...etc
+>       // tree data...etc
 >   }
 >   // ...etc
 > }
 > // Cleaner object-creation afterward
 > const treeA = new tree(19, 14, ...etc);
-> // ...etc
+> // more trees...etc
 > ```
 
 Objects can perform a variable amount of functions; a tree might have a vast amount of them, including a *grow* function that adds to it's height and age.
 
-Functions relating to changing the content of the data of *objects of a class* are called **methods**.
+Functions devoted to changing the *content* of the data of **objects of a *class*** are called **methods**.
 
 These include *helper*-methods that aren't defined *inside* the class itself but still help other parts of the program to somehow interact with them.
 
@@ -120,17 +119,21 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 >   getHug(huggerName) {
 >       // Add to list
 >       this.friends.push(huggerName);
->       // ...etc
+>       // operations...etc
 >       return this.deepConnection;
 >   }
->   // ...etc
+>   // more member-methods...etc
 > }
 > // Helper-Methods
 > const plantGrove(groveData) {
->   // ...etc
+>   // make like of new trees...etc
 >   return grove;
 > }
-> // ...etc
+> // helpers...etc
+> // Finally using them far below
+> const myTree = new tree(...);
+> const neighborsTree = new tree(...);
+> const nearbyGrove = plantGrove(...);
 > ```
 
 Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.
@@ -142,7 +145,7 @@ Exporting *tree.js*:
 > ```js
 > export class tree {...}
 > export const plantGrove(...) {...}
-> // ...etc
+> // helpers...etc
 > ```
 
 Exporting *veryLongClassName.js*:
@@ -163,90 +166,95 @@ Importing into *myProgram.js*:
 > ```js
 > // The top of the file
 > import tree from '/path-to-file/tree.js';
-> // ...etc
+> // interact with user...etc
 > // Usage
 > const myTree = new tree(...);
 > const nearbyGrove = plantGrove(...);
 > // ...etc
 > ```
 
-#### Don't fix what isn't broken
+---
+### *Not* more than meets the eye
 
-An intended side-effect of segregating the module is that it becomes protected from any temptation to *change* it across it's uses; providing fixed and understandable expectations from them and forcing us to use them *as-is*.
+An intended side-effect of segregating the module is that it becomes protected from any temptation to *transform* it across it's uses; providing fixed and understandable expectations from them and forcing us to use them *as-is*.
 
-```js
-const doThis(...) {
-```
 ```diff
+// A function that does "this"
+export const doThis(...) {
 - // does "this"
-+ // does "that"
-```
-```js
++ // does "this" and "that"
 }
+// without renaming or updating comments
+// usage may lead to confusing results
 ```
 
-The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both frequently act together.
+The power wielded when actively developing a program can tempt us to intertwine classes that commonly interact, especially when they both tend to act together, in an attempt to streamline and automate the process.
 
-*Coupling* classes, however, can lead to a situation where they overly-rely on each other, causing simple mistakes to have unwanted and hard-to-find and sometimes-dangerous consequences.
-
-*Simple mistake:*
+*Coupling* classes, however, can lead to a situation where simple mistakes can cause unwanted and hard-to-find--and sometimes dangerous--consequences.
 
 ```js
 class foot {
   constructor(...) {
+    // creates a new object
     this.leg = new leg(...);
-    // ...etc
+    // foot data
   }
-  // Methods that rely on leg data
-  // ...etc
+  // many methods that rely on,
+  // and change, leg data
 }
 ```
 
 ```js
 class leg {
   constructor(...) {
+    // creates a new object
     this.foot = new foot(...);
-    // ...etc
+    // leg data
   }
-  // Methods that rely on foot data
-  // ...etc
+  // many methods that rely on,
+  // and change, foot data
 }
 ```
+
+*Simple mistakes that built-up over-time:*
 
 ```js
 import leg from '/path/leg.js';
 // NO "errors" in compilation
-const leg = new leg(...);
-// but making a foot or leg results in
-// an endless loop, or recursion, of NEW objects
-// probably using up all system resources
-// and causing annoying "locks" or crashes
+const leftLeg = new leg(...);
+// ---Endless loop, or recursion, of NEW objects
+// using up system resources and causing crashes
+const hokeyPokey = (...) {
+  leftLeg.putOut();
+  // ...etc
+}
+// ---In big enough classes, finding bugs inside
+// complex method calls can seem almost impossible,
+// especially if changes come from the "outside"
 ```
 
+Ultimately it is an imperative for our own benefit to head-off frustration because changes to any strongly-coupled object requires that it's reflected on the other.
 
-
-These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than implicitly integrating it *inside* of them.
-
-*tree.js* Class definition:
+Preserving the class' generic state also maximizes it's usage while preventing the need to create *mostly*-identical classes or methods to interact with different objects.
 
 ```diff
+export class tree {
   constructor(...) {...}
-  // Perhaps aliens hug trees as well
-- hugPerson(personObject) {...}
-- hugAlien(alienObject) {...}
-+ hug(genericObject) {...}
-  // Or even better...
-+ hug(genericPieceOfData) {...}
-  // ...etc
+  // keep methods generalized
+- getPersonHug(personObject) {...}
+- getAlienHug(alienObject) {...}
++ getHug(objectOfAffection) {...}
+}
 ```
 
-Preserving the class' generic state maximizes it's possible usage, preventing the need to create *mostly*-identical classes or methods to interact with different objects.
-
-
-
-Tying *certain* classes of objects together can seem intuitive until you consider the broader need to relate *types* of object classes together for different *purposes*.
+---
 
 The legs of *tables* are not attached to a table's *hip-socket* and, to spare us the horror, should not be *implicitly* tied to one.
+
+These concepts together are called **loose-coupling** and allows the programmer to focus on integrating these modules *where* they interact rather than *inside* of the objects themselves.
+
+Tying *certain* classes of objects together is indeed intuitive but considering the broader need to relate *types* of object classes together for different *purposes*.
+
 
 But then again, you might rather use a different *type* of leg by creating a new class when the usage, context, or underlying-data are significantly different.
 
