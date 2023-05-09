@@ -398,14 +398,14 @@ Factory methods can be composed of other lower-level factory methods to further 
 The factory pattern conforms to most of--if not all--the other patterns I've outlined and exemplifies a treasured occurrence that I've been consistently referring to, but failing to define: a *design pattern*.
 
 ---
-#### Pattern-seeking
+### Pattern-seeking
 
-As stated, a **design pattern** combines every relevant *best-practice*, or standardized principles maximizing efficiency and clarity, within itself and within it's parts.
+As stated, a **design pattern** combines every relevant *best-practice*, or ***standardized principles maximizing efficiency and clarity***, within itself and within it's parts.
 
-It solidifies itself as a design *pattern* when many people, commonly through applying best-practices, come to the *same* shape or form--of an object or function--for the same purpose.
+It solidifies itself as a design *pattern* when many people, commonly through applying best-practices, come to the *same* shape or form--of an object or function--for the same *purpose*.
 
 In any effort to expand our vocabularies we often only search for the definition of a word when confronted with one we don't understand, so not wanting to pour over dictionary-definitions of design patterns is understandable.
 
-Whether or not you personally adhere to my specific set of applied *practices* and *patterns* you can see how utilizing them--after being made aware of them--can minimize the amount of frustration and time spent in-development and can maximize efficiency and clarity of purpose *as a matter of course*.
+Whether or not you personally adhere to my specific set of *principles* and apply the same *patterns* you can see how utilizing them--after being made aware of them--can minimize the amount of frustration and time spent in-development and can maximize efficiency and clarity of purpose *as a matter of course*.
 
-We all work in our own ways and modify our protocols to suit the context and our needs but some *wants* remain constant--the desire to be understood and to understand *yourself*--and using these design patterns in programming is what helps *me*.
+We all work in our own ways and modify our protocols to suit the context and our needs but some *wants* remain constant--the desire to understand, to be understood, and to understand *yourself*--and using these design patterns in programming is what helps *me*.
