@@ -245,7 +245,7 @@ The power wielded when actively developing a program can tempt us to to expand m
 
 **Coupling** objects, however, can lead to asymmetrical responsibilities and hidden interactions that are hard to grasp and harder to find.
 
-*Strongly-coupled* objects:
+*tightly*-coupled objects:
 
 ```js
 class Tail {
