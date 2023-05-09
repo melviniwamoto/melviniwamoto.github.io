@@ -7,7 +7,13 @@ date: 2023-04-27
 published: true
 labels:
 - javascript
-- Meteor
+- Facade
+- Module
+- Coupling
+- Composition
+- Inheritance
+- Factory
+- Design-Patterns
 ---
 #### Speaking in tongues
 
@@ -27,6 +33,8 @@ In the context of *work* the prospect of repeating the same laborious tasks over
 In programming, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how *frequently* we encounter these repeating *patterns*.
 
 The first time many of us are made to be aware of this, in our specific context, is in the phrase "Don't Repeat Yourself" (DRY).
+
+> **Note**: all code is in a *pseudo*-javascript
 
 > *Typical case of repeating patterns:*
 > ```js
