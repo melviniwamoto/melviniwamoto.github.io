@@ -15,7 +15,7 @@ labels:
 
 ### These boots were made for blocking
 
-Hyper-Text Markup Language (**HTML**) *"is the standard *markup language* for documents designed to be displayed in a web browser"*  and is combined with 
+Hyper-Text Markup Language (**HTML**) *"is the standard *markup language* for documents designed to be displayed in a web browser"***[^1]**  and is combined with 
 
 Bootstrap is a **UI-framework**--sets of tools for commonly-built interactable pieces of programs--which offers a collection of frequently-combined HTML and CSS settings for various purposes.
 
