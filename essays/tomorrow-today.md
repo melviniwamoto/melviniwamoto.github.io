@@ -173,16 +173,17 @@ These include *helper*-methods that aren't defined *inside* the class itself but
 > const nearbyGrove = plantGrove(...);
 > ```
 
+---
+
 #### **Note**: For the purpose of illustrative clarity:
 
 - Functions and methods *outside* of a class will use Normal function formatting with the **function** keyword.
 - Methods *inside* a class will use Arrow-Function formatting with the **let** keyword.
 - *DATA* will be defined with **var**.
 - *OBJECTS* and objects of *CLASSES* will be preceded by **const**.
+- code in this paper wont actually work if you copy it letter-for-letter: Be warned!
 
-> I'm doing this because **const** is largely preferred over the others
-> but seeing const everywhere can obscure these concepts.
-> This is all arbitrary, but it means that much of the code in this paper wont actually work if you copy it letter-for-letter: Be warned!
+---
 
 Special helper-methods that aid in the creation of objects are called **Factory** methods, including the Constructor method already mentioned, but can be beneficial when creating many of the same object. 
 
@@ -278,6 +279,10 @@ Ultimately, it is an imperative for our *own* benefit to head-off this frustrati
 - let getAlienHug = (alienObject) => {...}
 + let getHug = (objectOfAffection) => {...}
 ```
+
+---
+
+### One, too many
 
 When it is *indeed* natural to link several objects together, which often can be the case, it is better to either create a higher-level class that is *composed* of other classes or to *extend* classes.
 
