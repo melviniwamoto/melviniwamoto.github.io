@@ -3,21 +3,32 @@ layout: essay
 type: essay
 title: "Pulling myself up by the Bootstrap"
 # All dates must be YYYY-MM-DD format!
-date: 2023-02-23
+date: 2023-05-09
 published: true
 labels:
 - HTML
 - CSS
+- javascript
 - Bootstrap 5
 ---
-<body>
 
-<h2>What is Bootstrap?</h2>
+### These boots were made for blocking
 
-<p>Bootstrap 5 is a package which allows the designer of a website to create dynamically sized and stylized web pages.  The package consists of a variety of template-settings for types of sections that are frequently found on pages, like the now-common navigation bars at the tops of pages or the drop-down menus and their associated buttons.  It also gives incredible support for common icons, like the triple line that represents most menu buttons or the icons for popular social media websites and applications that links you to either a specific profile associated with that website or to attach your own profile somehow to the website.</p>
-<hr>
+"HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser"[^1] and utilizes
 
-<h2>Why use Bootstrap?</h2>
+Bootstrap is a **UI-framework**--sets of tools for commonly-built interactable pieces of programs--which offers a collection of frequently-combined HTML and CSS settings for various purposes.
+
+Additionally the framework enables the different *elements* of a page to be dynamically sized, through javascript, based on the size of the screen or window that's displaying the page.
+
+The framework is used by including the **package** in a program.
+
+This particular package consists of a variety of template-settings for frequently displayed *elements* on pages, like the now-common navigation bars at the tops of pages or the drop-down menus and their associated buttons.
+
+It also gives incredible support for common icons, like the triple-stacked line that represents most menu buttons or the icons for popular social media websites and applications that links you to either a specific profile associated with that website or to attach your own profile somehow to the website.
+
+---
+
+### Why use Bootstrap?</h2>
 
 <p>The complexity of using Bootstrap is significant, because you need to know what data these templates require and how and when to give it to them and sometimes even how they interact with each other.  The long list of supported objects--called classes--makes it a daunting prospect to learn, and I've only shallowly interacted with it so far, but from what I've experienced it has been far easier to use <em>it</em> than to try to create these things myself; it invokes a satisfying not-"reinventing the wheel"-vibe when it actually all works out.  It is here where Bootstrap can really shine since merely overriding the default behavior of these classes, like coloring or sizing or text-fonts, enables the designer to create uniqueness or parity as desired without all that leg-work.</p>
 
@@ -39,4 +50,4 @@ labels:
 
 <p>If someone were to ask me whether I would recommend learning to use Bootstrap for creating web pages I would heartily agree.  It is, for me, much more accessible with it's documentation and flexible enough to provide a level of functionality and customization to serve the needs of nearly every imaginable application.  It's support for resizing based on visible area lends itself extremely well to producing web sites that are correctly portrayed on any type of display.  Ultimately, there may be a certain heightened level of accomplishment via designing <em>everything</em> yourself but it personally felt pretty darn good for me to finish reproducing websites with the knowledge that I reduced a lot of that work. 5/5 Stars.</p>
 
-</body>
+[^1]: (Wikipedia)[https://en.wikipedia.org/wiki/HTML]

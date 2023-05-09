@@ -282,7 +282,7 @@ Ultimately, it is an imperative for our *own* benefit to head-off this frustrati
 
 ---
 
-### One, too many
+### One *too* many
 
 When it is *indeed* natural to link several objects together, which often can be the case, it is better to either create a higher-level class that is *composed* of other classes or to *extend* classes.
 
@@ -350,7 +350,7 @@ function fossilize(...) {
 ---
 ## Seeing the forest through the trees
 
-When we can be *absolutely* sure of the existence of a rigid set of functionalities--a bare *minimum* of capabilities--they're called **interfaces**.
+When we can be *absolutely* sure of the existence of a rigid set of functionalities--a bare *minimum* of capabilities--we call them **interfaces**.
 
 Similarly, absolute surety of rigid sets of attributes--symmetrical sets of data--are called **abstract classes** and can also have related interfaces;
 
@@ -395,9 +395,9 @@ function rulerFactory (rulerType, data, ...) {
 const myYardStick = rulerFactory('yard-stick', '0.9c', ...);
 ```
 
-Factory methods can be composed of other lower-level factory methods to further *delegate* the creation processes of each of the complex-objects' parts, once again applying *facade*.
+Factory methods can be composed of other lower-level factory methods to further *delegate* the creation-processes of each of the complex-objects' parts, once again applying *facade*.
 
-The factory pattern conforms to most of--if not all--the other patterns I've outlined and exemplifies a treasured occurrence that I've been consistently referring to, but failing to define: a *design pattern*.
+The factory pattern conforms to most of--if not all--the other patterns I've outlined and exemplifies a treasured occurrence that I've been consistently referring to, yet failing to define: a *design pattern*.
 
 ---
 ### Pattern-seeking
