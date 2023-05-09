@@ -9,12 +9,13 @@ labels:
 - HTML
 - CSS
 - javascript
-- Bootstrap 5
+- Bootstrap-5
+- React
 ---
 
 ### These boots were made for blocking
 
-"HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser"[^1] and utilizes
+Hyper-Text Markup Language (**HTML**) *"is the standard *markup language* for documents designed to be displayed in a web browser"* [**^1**] and is combined with 
 
 Bootstrap is a **UI-framework**--sets of tools for commonly-built interactable pieces of programs--which offers a collection of frequently-combined HTML and CSS settings for various purposes.
 
@@ -50,4 +51,4 @@ It also gives incredible support for common icons, like the triple-stacked line 
 
 <p>If someone were to ask me whether I would recommend learning to use Bootstrap for creating web pages I would heartily agree.  It is, for me, much more accessible with it's documentation and flexible enough to provide a level of functionality and customization to serve the needs of nearly every imaginable application.  It's support for resizing based on visible area lends itself extremely well to producing web sites that are correctly portrayed on any type of display.  Ultimately, there may be a certain heightened level of accomplishment via designing <em>everything</em> yourself but it personally felt pretty darn good for me to finish reproducing websites with the knowledge that I reduced a lot of that work. 5/5 Stars.</p>
 
-[^1]: (Wikipedia)[https://en.wikipedia.org/wiki/HTML]
+[^1]: https://en.wikipedia.org/wiki/HTML
