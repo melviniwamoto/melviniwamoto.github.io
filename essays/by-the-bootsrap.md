@@ -12,7 +12,7 @@ labels:
 - Bootstrap-5
 ---
 
-<img width="40%" class="float-start" src="../img/uiframeworks-e37/text-to-tablet.jpg" alt="Picture of a text-message translated to cuneiform and written onto a clay tablet">
+<img class="img-fluid" src="../img/uiframeworks-e37/text-to-tablet.jpg" alt="Picture of a text-message translated to cuneiform and written onto a clay tablet">
 
 ## Lost in translation
 
