@@ -29,9 +29,9 @@ Every language and alphabet can have wildly different *grammars*--patterns and s
 
 ### *So* sorry.
 
-Often *tone* or *contextual purpose* is the primary factor in trying to understand what *actually* was meant from any given message, but it can be challenging to communicate without some *conventions*, or agreed patterns, to represent them.
+Often *tone* or *contextual purpose* is the primary factor in trying to understand what *actually* was meant from any given message, but it can be challenging to communicate these intents without some *conventions*, or agreed patterns, to represent them.
 
-Formatting can serve to impart the intended subtext on, or include additional context to, the overlying message through *emphasis* or **highlighting** on ***words and Letters***.
+For writing, *formatting* can serve to impart the intended subtext on, or include additional context to, the overlying message through *emphasis* or **highlighting** on ***words and Letters***.
 
 Hyper-Text Markup Language [HTML][^html], Cascading Style Sheets ~~Language~~ [CSS][^css], and JavaScript [JS][^javascript] are the languages for the **content** and **formatting** and **functions**, respectively, of the documents that *browsers* use to communicate with *pages*.
 
@@ -52,17 +52,18 @@ HTML ***elements***--which are the *types* of sections of a page, called tags--a
 ### Sound it out
 Learning how to spell words can be painful ~~and seem spiteful~~ but, in programming, as long as reading it produces the correct-enough sounds it doesn't matter *how* you ***spehl*** it.
 
-When introduced to new words through speech you *could* deduce the correct *spelling* if you were already familiar with the culture, and *grammar*, that the word was from.
+When introduced to new words through speech you *could* deduce the correct spelling *if* you were already familiar with the culture--the *grammar*--that the word was from.
 
 This is because there exists a common *vocabulary* of words that already symbolize many common *sounds* of the language into it's *typically* written forms.
 
-A grammar normally has different rules for speaking and writing *types* of words depending on how those words are *used* or to modify what it *means*.
+A grammar normally has different rules for speaking and writing *types* of words depending on how either those words are used, or to modify what it *means*.
 
 Typical **Verb** Forms:
 - Base: **Spell**
-- Spell***ing***
-- Spell***ed***
-- ~~Spell***unking***~~
+- Noun: Spell***er***
+- Present-Tense: Spell***ing***
+- Past-Tense: Spell***ed***
+- ~~Cave-Diving: Spell***unking***~~
 
 For some reason, there are people who catalog the "correct" spellings--ie. colo~~u~~r--of words and their derivative forms into horrible--logically-ordered--lists that are *hundreds* of pages long called dictionaries.
 
@@ -121,7 +122,7 @@ Combining Bootstrap with [**React**](https://react.dev/), another UI-Framework, 
 </Container>
 ```
 
-You can see how powerful it is to semantically name the elements to replace the repetitious class-combinations.
+You can see how powerful it is to semantically name the elements to replace and represent the repetitious class-combinations.
 
 This reduces the difficulty in *writing* and *reading* HTML and CSS to a trivially-low level and allows the programmer to focus on the *big-picture* rather than getting bogged down in all the details.
 
