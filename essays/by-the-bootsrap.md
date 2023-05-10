@@ -49,10 +49,10 @@ HTML ***elements***--which are the *types* of sections of a page, called tags--a
 ---
 **References:**
 
-[^html]: Hyper-Text Markup Language (HTML): *"... the standard markup language for **documents designed to be displayed in a web browser** ..."*: <https://en.wikipedia.org/wiki/HTML>
+[^html]: **Hyper-Text Markup Language** (**HTML**): *"... the standard markup language for **documents designed to be displayed in a web browser** ..."*: <https://en.wikipedia.org/wiki/HTML>
 
-[^css]: Cascading Style Sheets (CSS): *"... a style sheet language used for describing the **presentation of a document written in a markup language** such as HTML ..."*: <https://en.wikipedia.org/wiki/CSS>
+[^css]: **Cascading Style Sheets** (**CSS**): *"... a style sheet language used for describing the **presentation of a document written in a markup language** such as HTML ..."*: <https://en.wikipedia.org/wiki/CSS>
 
-[^javascript]: JavaScript (JS): *"... a programming language that is one of the **core technologies of the World Wide Web, alongside HTML and CSS**. ..."*: <https://en.wikipedia.org/wiki/JavaScript>
+[^javascript]: **JavaScript** (**JS**): *"... a programming language that is one of the **core technologies of the World Wide Web, alongside HTML and CSS**. ..."*: <https://en.wikipedia.org/wiki/JavaScript>
 
 ---
