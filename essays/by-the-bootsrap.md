@@ -26,13 +26,17 @@ Every language and alphabet can have wildly different *grammars*--patterns and s
 
 ### *So* sorry.
 
-Often *tone* or *contextual purpose* is the primary factor in trying to understand what *actually* was meant from any given message.
+Often *tone* or *contextual purpose* is the primary factor in trying to understand what *actually* was meant from any given message, but it can be challenging to communicate without some *conventions*, or agreed patterns, to represent them.
 
-Formatting can serve to impart the intended tone or context of the underlying message through conventions for *emphasis* or **highlighting** on ***words*** to convey these various artistic, *implicit*, and **distinct** concepts.
+Formatting can serve to impart the intended subtext on, or include additional context to, the overlying message through *emphasis* or **highlighting** on ***words and Letters***.
 
 Hyper-Text Markup Language [HTML][^html], Cascading Style Sheets ~~Language~~ [CSS][^css], and JavaScript [JS][^javascript] are the languages for the **content** and **formatting** and **functions**, respectively, of the documents that *browsers* use to communicate with *pages*.
 
-<img width="40%" class="float-end" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ebay.com%2Fitm%2F314278988354&psig=AOvVaw1gQr0xJQyGevFKgofNWHzX&ust=1683781280054000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLCG6Zr86f4CFQAAAAAdAAAAABAG" alt="Image of a board-game that uses letters as pieces">
+<img width="40%" class="float-end" src="https://cdn.decorpad.com/photos/2020/11/23/restoration-hardware-wall-scrabble.jpg" alt="Image of a board-game that uses letters as pieces">
+
+#### Elemenopee
+
+HTML ***elements***--which are the *types* of sections of a page, called tags--and CSS ***classes***--group-settings like sizes with colors--make up the *alphabet and punctuation* of the *language of the internet*.
 
 ```html
 <div class="properties" id="division-element">
@@ -41,10 +45,23 @@ Hyper-Text Markup Language [HTML][^html], Cascading Style Sheets ~~Language~~ [C
 </div>
 ```
 
-HTML ***elements***--which are the *types* of sections of a page, called tags--and CSS ***classes***--group-settings like sizes with colors--make up the *alphabet and punctuation* of the *language of the internet*.
-
 ---
 ### Sound it out
+Learning how to spell words can be painful ~~and seem spiteful~~ but, in programming, as long as reading it produces the correct-enough sounds it doesn't matter *how* you ***spehl*** it.
+
+In natural language, when introduced to new words you *could* deduce the correct *spelling* if you were already familiar with the culture, and *grammar*, that the word was from.
+
+This is because there exists a common *vocabulary* of words that already symbolize many common *sounds* of the language into it's *typically* written forms.
+
+The grammar normally has different rules for speaking and writing *types* of words depending on how those words are *used* or to modify what it *means*.
+
+Typical **Verb** Forms:
+- Base: **Spell**
+- Spell***ing***
+- Spell***ed***
+- ~~Spell***unking***~~
+
+For some reason there are people who catalog the "correct" spellings--ie. colo~~u~~r--of words, and all of their derivative forms, into horrible--logically-ordered--lists that are *hundreds* of pages long called dictionaries.
 
 ---
 ## *These boots are made for talkin'!*
