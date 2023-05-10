@@ -9,7 +9,10 @@ labels:
 - HTML
 - CSS
 - javascript
-- Bootstrap-5
+- UI-Frameworks
+- Bootstrap-5.0
+- React
+- React-Bootstrap
 ---
 
 <img class="img-fluid" src="../img/uiframeworks-e37/text-to-tablet.jpg" alt="Picture of a text-message translated to cuneiform and written onto a clay tablet">
@@ -61,12 +64,64 @@ Typical **Verb** Forms:
 - Spell***ed***
 - ~~Spell***unking***~~
 
-For some reason there are people who catalog the "correct" spellings--ie. colo~~u~~r--of words, and all of their derivative forms, into horrible--logically-ordered--lists that are *hundreds* of pages long called dictionaries.
+For some reason, there are people who catalog the "correct" spellings--ie. colo~~u~~r--of words and their derivative forms into horrible--logically-ordered--lists that are *hundreds* of pages long called dictionaries.
+
+Luckily, there are technologies that allow programs with electronic dictionaries to predict what you're spelling and suggest words that match your input.
 
 ---
 ## *These boots are made for talkin'!*
 
+[**Bootstrap-5.0**](https://getbootstrap.com/docs/5.0/getting-started/introduction/) is a [user-interface](https://en.wikipedia.org/wiki/User_interface) [framework](https://en.wikipedia.org/wiki/Software_framework) (UI-Framework), that is a set of CSS tools that help to design and build user interfaces, and is for website designers what auto-complete and spell-check is for writers.
 
+```html
+==HTML and CSS without Bootstrap==
+==For a Column==
+<div class="width-1 height-2 color-1 text-1">
+  ==For a Row==
+  <div class="width-3 height-4 color-1 text-2">
+     <...>
+  </div>
+  <...>
+</div>
+==For a generic Container==
+<div class="width-5 width-6 color-1 text-2">
+  <...>
+</div>
+```
+
+Bootstrap streamlines the process of dividing pages up into commonly formatted sections, like columns and rows, for various purposes, like buttons, links, or plain text, or for *theming* sections differently.
+
+It also supports automatically sizing elements based on the screen's or window's dimensions, allowing phones and computers to both view the same page from the same document, albeit differently.
+
+```html
+==With Bootstrap==
+<div class="col theme-1">
+  <div class="row theme-2">
+     <...>
+  </div>
+  <...>
+</div>
+<div class="container theme-2">
+  <...>
+</div>
+```
+
+Combining Bootstrap with [**React**](https://react.dev/), another UI-Framework, produces an advancement in the development-speed of web pages--and this is ***not*** an exaggeration--*on the level of **dictation-software*** and is called [**React-Bootstrap**](https://react-bootstrap.github.io/).
+
+```html
+==With React-Bootstrap==
+<Col>
+  <Row>
+    <...>
+  </Row>
+  <...>
+</Col>
+<Container>
+  <...>
+</Col>
+```
+
+The difficulty in *writing* and *reading* HTML and CSS, when using UI-Frameworks, becomes trivially low and allows the programmer to focus on *communicating* with their users much more eloquently and effectively and is one of the strongest conceivable tools for that purpose.
 
 ---
 **References:**
