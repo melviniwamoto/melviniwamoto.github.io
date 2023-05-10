@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "Writing for tomorrow, today."
 # All dates must be YYYY-MM-DD format!
-date: 2023-04-27
+date: 2023-05-08
 published: true
 labels:
 - javascript

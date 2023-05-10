@@ -52,11 +52,11 @@ HTML ***elements***--which are the *types* of sections of a page, called tags--a
 ### Sound it out
 Learning how to spell words can be painful ~~and seem spiteful~~ but, in programming, as long as reading it produces the correct-enough sounds it doesn't matter *how* you ***spehl*** it.
 
-In natural language, when introduced to new words you *could* deduce the correct *spelling* if you were already familiar with the culture, and *grammar*, that the word was from.
+When introduced to new words through speech you *could* deduce the correct *spelling* if you were already familiar with the culture, and *grammar*, that the word was from.
 
 This is because there exists a common *vocabulary* of words that already symbolize many common *sounds* of the language into it's *typically* written forms.
 
-The grammar normally has different rules for speaking and writing *types* of words depending on how those words are *used* or to modify what it *means*.
+A grammar normally has different rules for speaking and writing *types* of words depending on how those words are *used* or to modify what it *means*.
 
 Typical **Verb** Forms:
 - Base: **Spell**
@@ -118,10 +118,14 @@ Combining Bootstrap with [**React**](https://react.dev/), another UI-Framework, 
 </Col>
 <Container>
   <...>
-</Col>
+</Container>
 ```
 
-The difficulty in *writing* and *reading* HTML and CSS, when using UI-Frameworks, becomes trivially low and allows the programmer to focus on *communicating* with their users much more eloquently and effectively and is one of the strongest conceivable tools for that purpose.
+You can see how powerful it is to semantically name the elements to replace the repetitious class-combinations.
+
+This reduces the difficulty in *writing* and *reading* HTML and CSS to a trivially-low level and allows the programmer to focus on the *big-picture* rather than getting bogged down in all the details.
+
+An immense vocabulary combined with the appropriate artistic tones and formats, along with templates and other tools, gives us the opportunity to be as eloquent as we can be.
 
 ---
 **References:**
