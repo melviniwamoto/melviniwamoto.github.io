@@ -44,6 +44,9 @@ Hyper-Text Markup Language [HTML][^html], Cascading Style Sheets ~~Language~~ [C
 HTML ***elements***--which are the *types* of sections of a page, called tags--and CSS ***classes***--group-settings like sizes with colors--make up the *alphabet and punctuation* of the *language of the internet*.
 
 ---
+### Sound it out
+
+---
 ## *These boots are made for talkin'!*
 
 
