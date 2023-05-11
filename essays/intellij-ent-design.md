@@ -12,7 +12,7 @@ labels:
 ---
 ### The creation of a problem
 
-When our journey in programming begins we are taught to add descriptive text to any commands or variables with their purposes.
+When our journey in programming begins we are taught to add descriptive text to any functions or variables.
 
 ```diff
 - // *Inaccurate Description*
@@ -22,12 +22,6 @@ When our journey in programming begins we are taught to add descriptive text to 
 ```
 
 In practice, however, when the program isn't functioning as-intended we have the impulse to add or remove or rearrange things until we can get it to work but potentially confusing comments can still litter the file.
-
-```js
-  // test stuff
-  var test = {x:0,y:0,z:0};
-  // *Why is test needed as an object?*
-```
 
 Having the discipline to stick to the *program* when it comes to much more tedious ideas about spacing or arbitrary symbol placement can downright become an anathema when the file is still in a dynamic state.
 
