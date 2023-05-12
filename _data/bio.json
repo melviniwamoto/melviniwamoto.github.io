@@ -15,18 +15,21 @@
     ]
   },
   "interests": [
-    { "name": "Games" },
-    { "name": "Movies" },
-    { "name": "Books" }
+    { "name": "Computers" },
+    { "name": "Science" },
+    { "name": "Computer-Science" },
+    { "name": "Software-Development" },
+    { "name": "Engineering" },
+    { "name": "Astronomy" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript" ]
+      "keywords": [ "C", "C++", "Java", "Javascript", "HTML", "CSS", "Bootstrap", "React", "Meteor" ]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "UNIX", "Git/GitHub", "g++" ]
+      "keywords": [ "UNIX", "LINUX", "Git/GitHub", "g++" ]
     }
   ],
   "education": [
