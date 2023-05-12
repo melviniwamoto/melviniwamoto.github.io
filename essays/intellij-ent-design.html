@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Intellij-ent design | Melvin Iwamoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/melviniwamoto.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:url" content="https://melviniwamoto.github.io/essays/intellij-ent-design.html">
+    <meta property="og:title" content="Intellij-ent design | Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/melviniwamoto.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Intellij-ent design | Melvin Iwamoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Melvin Iwamoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Intellij-ent design</h1>
+  <span class="date">09 Feb 2023</span>
+  <hr>
+  <h3 id="the-creation-of-a-problem">The creation of a problem</h3>
+
+<p>When our journey in programming begins we are taught to add descriptive text to any functions or variables.</p>
+
+<p>In practice, however, when the program isn’t functioning as-intended we have the impulse to add or remove or rearrange things until we can get it to work.</p>
+
+<p>Having the discipline to stick to the <em>program</em> for the more tedious aspects can become an anathema.</p>
+
+<hr />
+<h3 id="standard-definition">Standard Definition</h3>
+
+<p>It is only when we return to our work, or when we’re finished, that we regret not originally utilizing the <a href="https://en.wikipedia.org/wiki/Programming_style"><strong>Coding-Standards</strong></a>–“… <em>a set of rules or guidelines used when writing the source code for a computer program</em> …”–which promote clarity and readability.</p>
+
+<p>Using a text-editing program that can automate or impose these rules allows everyone to quickly and efficiently write code that all look identical without the combined parallel effort it would require to do so, otherwise.</p>
+
+<p>Having identical formats allow us to densely pack our work with certain concepts implicitly, <em>between-the-lines</em>.</p>
+
+<h4 id="tall-small-and-justright">Tall, small, and justRight</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">inonecase</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">harder-to-read</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CapitalizingObjects</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">distinguishes</span><span class="p">:</span> <span class="dl">'</span><span class="s1">what-they-are</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">badlySpaced</span><span class="p">(){</span><span class="nx">isHarderTo</span><span class="p">(</span><span class="nx">read</span><span class="p">,</span><span class="nx">fix</span><span class="p">);}</span>
+
+<span class="kd">function</span> <span class="nx">isEasierToRead</span> <span class="p">(</span><span class="nx">withSpacing</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">linesAreIndented</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// You can see</span>
+    <span class="nx">whatIs</span><span class="p">(</span><span class="nx">inside</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// and, at a glance,</span>
+  <span class="nx">whatIs</span><span class="p">(</span><span class="nx">outside</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// And symbol-placement can</span>
+<span class="c1">// relate it to its "function"</span>
+
+<span class="c1">// Spacing lines apart can</span>
+<span class="nx">imply</span><span class="p">(</span><span class="nx">relationships</span><span class="p">);</span>
+<span class="nx">andLogical</span><span class="p">(</span><span class="nx">groupings</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>There are rules that concern themselves with <strong>white-space</strong>–spaces between symbols and between lines–to enable either easier reading or to illustrate relationships.</p>
+
+<p>Others focus on <strong>casing</strong>–whether a letter should be upper-case or lower-case–for names of variables and objects to imply their uses or what they are.</p>
+
+<p>Some can be particular to languages, but all simply are arbitrary patterns to follow to help us to quickly understand the intent of the author.</p>
+
+<hr />
+<h2 id="easy-mode">Easy mode</h2>
+
+<p><a href="https://www.jetbrains.com/idea/">intellij IDEA</a> is an Integrated Development-Environment (IDE), which is simply a <em>compiler</em>–performs a process to turn <em>source</em> code into instructions the machine can understand–combined with a text-editor.</p>
+
+<p>This editor, with the help of an automated <em>reader</em>, <a href="https://eslint.org/"><strong>ESLint</strong></a>, can identify certain “problems” in a file with regard either to the rules of a coding-standard or other issues with efficiency and format.</p>
+
+<p>The program can be personally configured to handle individual aspects of coding-standards or together as a pre-configured group.</p>
+
+<p>Being able to ignore standards while still, mostly, adhering to one has given me the opportunity to be lazy and intellij together with ESLint combine to be <em>the</em> best IDE-experience I’ve ever had and I will continue to use them whenever possible.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

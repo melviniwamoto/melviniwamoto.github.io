@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Writing for tomorrow, today. | Melvin Iwamoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/melviniwamoto.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:url" content="https://melviniwamoto.github.io/essays/tomorrow-today.html">
+    <meta property="og:title" content="Writing for tomorrow, today. | Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/melviniwamoto.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Writing for tomorrow, today. | Melvin Iwamoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Melvin Iwamoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Writing for tomorrow, today.</h1>
+  <span class="date">08 May 2023</span>
+  <hr>
+  <h4 id="speaking-in-tongues">Speaking in tongues</h4>
+
+<p>Understanding others can be troublesome when there are language barriers, but it can be even more pronounced if someone uses idioms you’re unfamiliar with; “What do you mean the early bird catches the worm?  Which bird?”</p>
+
+<p>Now imagine that the speaker you’re listening to isn’t even necessarily being intelligible in that language.</p>
+
+<p>That is what it is like, sometimes, while reading my own work.</p>
+
+<p>This is why I try to provide enough context to myself, or anyone else for that matter, about what I was trying to accomplish and there are certain things that we do in programming which can alleviate that very human struggle of trying to understand yourself.</p>
+
+<hr />
+<h2 id="paradigm-a-dozen">Paradigm-a-dozen</h2>
+
+<p>In the context of <em>work</em> the prospect of repeating the same laborious tasks over and over is what leads to innovation, like in the case of power tools.</p>
+
+<p>In programming, we have a unique opportunity to create these innovations ourselves and it is greatly encouraged because of how <em>frequently</em> we encounter these repeating <em>patterns</em>.</p>
+
+<p>The first time many of us are made to be aware of this, in our specific context, is in the phrase “Don’t Repeat Yourself” (DRY).</p>
+
+<blockquote>
+  <p><strong>Note</strong>: all code is in a <em>pseudo</em>-javascript</p>
+</blockquote>
+
+<blockquote>
+  <p><em>Typical case of repeating patterns:</em></p>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Note: const, var, and let are "keywords"</span>
+<span class="c1">// const defines a "constant", unchanging, piece of data</span>
+<span class="kd">const</span> <span class="nx">hourlyWage</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="c1">// var defines a "variable", changing, piece of data</span>
+<span class="kd">var</span> <span class="nx">weeklyIncome</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="nx">hourlyWage</span><span class="p">;</span>
+<span class="c1">// let is also a "variable"</span>
+<span class="kd">let</span> <span class="nx">yearlyIncome</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="nx">weeklyIncome</span><span class="p">;</span>
+<span class="c1">// *...Do Other stuff...*</span>
+<span class="nx">weeklyIncome</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="nx">hourlyWage</span><span class="p">;</span>
+<span class="nx">yearlyIncome</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="nx">weeklyIncome</span><span class="p">;</span>
+<span class="c1">// *...Change data and do it yet again...*</span>
+</code></pre></div>  </div>
+  <p>When we see repeating sets of tasks performed on specific sets of data we like to group them up into nice little packages that we call <strong>functions</strong>.</p>
+</blockquote>
+
+<blockquote>
+  <p><em>Normal format of a function:</em></p>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A good description of what it does</span>
+<span class="kd">function</span> <span class="nx">functionName</span> <span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">output</span><span class="p">;</span>
+  <span class="c1">// ...operations...</span>
+  <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p><em>Arrow-Function format represents the same thing:</em></p>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Full descrition, including: purpose, inputs, and outputs</span>
+<span class="kd">let</span> <span class="nx">semanticName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">whatItNeeds</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// Good description of variable</span>
+  <span class="c1">// *data-types MUST match if defined*</span>
+  <span class="kd">let</span> <span class="nx">whatYoudExpect</span><span class="p">;</span>
+  <span class="c1">// *...mysterious implementation...*</span>
+  <span class="c1">// *...esoteric operations...*</span>
+  <span class="c1">// *...and good explanations...*</span>
+  <span class="k">return</span> <span class="nx">whatYoudExpect</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Declaring these functions with <em>semantic</em> names, or names that describe what it does, is a type of <em>design pattern</em> called the <strong><em>Facade</em> pattern</strong> because of how the complexity <em>behind</em> it is hidden by the name while still providing context as to it’s purpose.</p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Pick an outfit from a wardrobe</span>
+<span class="kd">function</span> <span class="nx">pickOutfit</span><span class="p">(</span><span class="nx">wardrobe</span><span class="p">,</span> <span class="nx">stars</span><span class="p">,</span> <span class="p">...</span><span class="nx">etc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// *If you name data semantically, comments are redundant*</span>
+  <span class="kd">let</span> <span class="nx">chanceOfRain</span> <span class="o">=</span> <span class="nx">askAstrologer</span><span class="p">(</span><span class="nx">stars</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">coat</span> <span class="o">=</span> <span class="nx">chooseCoat</span><span class="p">(</span><span class="nx">chanceOfRain</span><span class="p">,</span> <span class="nx">wardrobe</span><span class="p">);</span>
+  <span class="c1">// more sets of functions...etc</span>
+  <span class="k">return</span> <span class="nx">outfit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p><em>Sets</em> of functions can also repeat so we simply create higher-level functions, and so-on.</p>
+
+<hr />
+<h3 id="seeing-the-trees-in-the-forest">Seeing the trees in the forest</h3>
+
+<p>Collecting repeating and related sets of <em>data</em> into a new entity is called <strong>object creation</strong>.</p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">treeHeightA</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">treeAgeA</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">treeHeightB</span> <span class="o">=</span> <span class="mi">34</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">treeAgeB</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+<span class="c1">// *more data*...etc</span>
+<span class="c1">// *treeA is an OBJECT*</span>
+<span class="kd">const</span> <span class="nx">treeA</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// *with height-DATA*</span>
+  <span class="na">height</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="c1">// *and age-DATA*</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">14</span>
+  <span class="c1">// *other data*...etc</span>
+<span class="p">}</span>
+<span class="c1">// *more objects*...etc</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The result of applying facade to object creation produces <em>classes</em> that tidily encapsulate the central philosophy behind <em>Object-Oriented Programming</em>.</p>
+
+<p>The <strong>Class</strong> hides the unwieldy creation of objects behind a special type of <em>function</em> called a <strong>Constructor</strong> method and uses the keyword <strong>new</strong> when creating <em>new</em> objects.</p>
+
+<p><em>Example Class:</em></p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Represents a tree</span>
+<span class="c1">// *class is a keyword for a generic "shape" of an object*</span>
+<span class="kd">class</span> <span class="nx">Tree</span> <span class="p">{</span>
+  <span class="c1">// *Creation hidden inside the class*</span>
+  <span class="kd">constructor</span> <span class="p">(</span><span class="nx">height</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="p">...</span><span class="nx">etc</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// *Shape of the OBJECT*</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="c1">// *other tree data*...etc</span>
+  <span class="p">}</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+<span class="c1">// Cleaner object-creation afterward</span>
+<span class="kd">const</span> <span class="nx">treeA</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="p">...</span><span class="nx">etc</span><span class="p">);</span>
+<span class="c1">// *more trees*...etc</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Objects can perform varying functions; a tree might have a vast amount of them, including a <em>grow</em> function that adds to it’s height and age.</p>
+
+<p>Functions devoted to changing the <em>content</em> of the data of <strong>objects of a <em>class</em></strong> are called <strong>methods</strong>.</p>
+
+<p>These include <em>helper</em>-methods that aren’t defined <em>inside</em> the class itself but still help other parts of the program to somehow interact with them.</p>
+
+<p><em>Example Methods:</em></p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Tree</span> <span class="p">{</span>
+  <span class="kd">constructor</span> <span class="p">(...)</span> <span class="p">{...}</span>
+  <span class="c1">// =Methods=</span>
+  <span class="c1">// Accepts a hug, takes name data</span>
+  <span class="kd">let</span> <span class="nx">getHug</span> <span class="o">=</span> <span class="p">(</span><span class="nx">huggerName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// *Note: "this" is a self-referential keyword*</span>
+    <span class="c1">// *that refers to the "Tree" from the constructor*</span>
+    <span class="c1">// Add name to list</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">friends</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">huggerName</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">deepConnection</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">// *more methods*...etc</span>
+<span class="p">}</span>
+<span class="c1">// =Helper-Methods=</span>
+<span class="kd">function</span> <span class="nx">plantGrove</span><span class="p">(</span><span class="nx">numTrees</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// *make list of new trees*...etc</span>
+  <span class="k">return</span> <span class="nx">grove</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// *more helpers*...etc</span>
+<span class="c1">// *Finally using the class far below*</span>
+<span class="c1">// *Note: "this.friends" inside the class*</span>
+<span class="c1">// *is the same as "myTree.friends" outside*</span>
+<span class="kd">const</span> <span class="nx">myTree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(...);</span>
+<span class="kd">const</span> <span class="nx">neighborsTree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(...);</span>
+<span class="kd">const</span> <span class="nx">nearbyGrove</span> <span class="o">=</span> <span class="nx">plantGrove</span><span class="p">(...);</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<hr />
+
+<h4 id="note-for-the-purpose-of-illustrative-clarity"><strong>Note</strong>: For the purpose of illustrative clarity:</h4>
+
+<ul>
+  <li>Functions and methods <em>outside</em> of a class will use Normal function formatting with the <strong>function</strong> keyword.</li>
+  <li>Methods <em>inside</em> a class will use Arrow-Function formatting with the <strong>let</strong> keyword.</li>
+  <li><em>DATA</em> will be defined with <strong>var</strong>.</li>
+  <li><em>OBJECTS</em> and objects of <em>CLASSES</em> will be preceded by <strong>const</strong>.</li>
+  <li>code in this paper wont actually work if you copy it letter-for-letter: Be warned!</li>
+</ul>
+
+<hr />
+
+<p>Special helper-methods that aid in the creation of objects are called <strong>Factory</strong> methods, including the Constructor method already mentioned, but can be beneficial when creating many of the same object.</p>
+
+<p>Increasing the complexity of these classes eventually crowds the file to the point where separating them from the files that use them becomes necessary to preserve readability.</p>
+
+<p>The <strong>module pattern</strong> presumably arose from this need and allows these <strong><em>modules</em></strong> to be <em>exported</em> from their files and <em>imported</em> into multiple files, evoking DRY.</p>
+
+<p>Exporting <em>Tree.js</em>:</p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">Tree</span> <span class="p">{...}</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">plantGrove</span><span class="p">(...)</span> <span class="p">{...}</span>
+<span class="c1">// helpers...etc</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Exporting <em>VeryLongClassName.js</em>:</p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">VeryLongClassName</span> <span class="p">{...}</span>
+<span class="kd">function</span> <span class="nx">veryLongHelperName</span><span class="p">(...)</span> <span class="p">{...}</span>
+<span class="c1">// ...etc</span>
+<span class="c1">// *Bottom of the file*</span>
+<span class="k">export</span> <span class="p">{</span>
+  <span class="nx">VeryLongClassName</span> <span class="k">as</span> <span class="nx">ShortClassName</span><span class="p">,</span>
+  <span class="nx">veryLongHelperName</span> <span class="k">as</span> <span class="nx">shortHelperName</span><span class="p">,</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Importing into <em>MyProgram.js</em>:</p>
+
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// *The top of the file*</span>
+<span class="k">import</span> <span class="nx">Tree</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">/path-to-file/Tree.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// *interact with user*...etc</span>
+<span class="kd">const</span> <span class="nx">myTree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(...);</span>
+<span class="c1">// ...etc</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<hr />
+<h3 id="not-more-than-meets-the-eye"><em>Not</em> more than meets the eye</h3>
+
+<p>An intended side-effect of segregating the module when it is complete is that it becomes protected from any temptation to <em>transform</em> it across it’s uses; providing fixed expectations from them and forcing us to use them <em>as-is</em>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A function that does "this"</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">doThis</span><span class="p">(...)</span> <span class="p">{</span>
+  <span class="c1">// *does "this" first*</span>
+  <span class="k">return</span> <span class="nx">addThatToThis</span><span class="p">(</span><span class="nx">doThat</span><span class="p">(...));</span>
+<span class="p">}</span>
+<span class="c1">// *without renaming function, or updating comments,*</span>
+<span class="c1">// *usage may lead to perplexing results*</span>
+<span class="c1">// *Note: NOT referring to the "this" keyword*</span>
+</code></pre></div></div>
+
+<p>The power wielded when actively developing a program can tempt us to to expand method functionality, or to intertwine classes that commonly interact, in an attempt to streamline and automate processes.</p>
+
+<p><strong>Coupling</strong> objects, however, can lead to asymmetrical responsibilities and hidden interactions that are hard to grasp and harder to find.</p>
+
+<p><em>tightly</em>-coupled objects:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Tail</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(...)</span> <span class="p">{...}</span>
+  <span class="c1">// Changes the data of other objects</span>
+  <span class="kd">let</span> <span class="nx">wag</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dogObject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// error trying to access method of a null object</span>
+    <span class="nx">dogObject</span><span class="p">.</span><span class="nx">mind</span><span class="p">.</span><span class="nx">boggle</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Dog</span> <span class="p">{</span>
+  <span class="c1">// Class data was changed over time</span>
+  <span class="kd">constructor</span><span class="p">(...)</span> <span class="p">{...}</span>
+  <span class="c1">// Relies on data from a single input</span>
+  <span class="kd">let</span> <span class="nx">chase</span> <span class="o">=</span> <span class="p">(</span><span class="nx">tailObject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{...}</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In small classes strong-coupling makes finding bugs inside method calls nearly impossible, especially if changes are coming from <em>outside</em>, and causes readability to suffer because of the need to read two or three files at the same time.</p>
+
+<p>Ultimately, it is an imperative for our <em>own</em> benefit to head-off this frustration by preserving each class’ generic state and functions as much as possible; this is called <strong>loose-coupling</strong>.</p>
+
+<p><em>tree.js</em> Class:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  // Aliens might hug trees, as well
+<span class="gd">- let getPersonHug = (personObject) =&gt; {...}
+- let getAlienHug = (alienObject) =&gt; {...}
+</span><span class="gi">+ let getHug = (objectOfAffection) =&gt; {...}
+</span></code></pre></div></div>
+
+<hr />
+
+<h3 id="one-too-many">One <em>too</em> many</h3>
+
+<p>When it is <em>indeed</em> natural to link several objects together, which often can be the case, it is better to either create a higher-level class that is <em>composed</em> of other classes or to <em>extend</em> classes.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Engine</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">/path/Engine.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// ...etc</span>
+<span class="kd">class</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="c1">// =Sub-classes=</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">engine</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Engine</span><span class="p">(...);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">frontLeftWheel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wheel</span><span class="p">(...);</span>
+    <span class="c1">// ...etc</span>
+    <span class="c1">// =Class data=</span>
+    <span class="c1">// ...etc</span>
+  <span class="p">}</span>
+  <span class="c1">// Methods</span>
+  <span class="kd">let</span> <span class="nx">drive</span> <span class="o">=</span> <span class="p">(...)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// If speed is high enough, then do...</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">speed</span> <span class="o">&gt;=</span> <span class="mi">88</span><span class="p">)</span> <span class="p">{...}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">fluxCapacitor</span> <span class="o">&gt;=</span> <span class="mf">1.21</span><span class="p">)</span> <span class="p">{...}</span>
+    <span class="c1">// ...etc</span>
+  <span class="p">}</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">stowAlmanac</span><span class="p">(...)</span> <span class="p">{...}</span>
+<span class="c1">// ...etc</span>
+</code></pre></div></div>
+
+<p><strong>Composition</strong> is a straightforward type of umbrella-object that <strong>owns</strong> the smaller parts of itself; like how a car <strong>has</strong> wheels and an engine.</p>
+
+<p>Conversely, <strong>Aggregation</strong> implies either <em>extension</em> or <em>specification</em> of an object and specifically does <em>not</em> imply ownership; a truck <strong>is</strong> a vehicle, a car <strong>is</strong> a vehicle, and neither <strong>has</strong> a vehicle.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Chair</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">/path/Chair.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nx">Bench</span> <span class="kd">extends</span> <span class="nx">Chair</span> <span class="p">{...}</span>
+<span class="kd">class</span> <span class="nx">Throne</span> <span class="kd">extends</span> <span class="nx">Chair</span> <span class="p">{...}</span>
+<span class="kd">class</span> <span class="nx">Toilet</span> <span class="kd">extends</span> <span class="nx">Throne</span> <span class="p">{...}</span>
+<span class="c1">// ...etc</span>
+</code></pre></div></div>
+
+<p>Aggregation and extension have an implicit functionality distinct from composition: the constructor of the extended <strong>parent</strong> class is used when making new <strong>child</strong> classes causing the child to <strong>inherit</strong> everything the parent <em>is</em> and <em>does</em> and <em>needs</em>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Tooth</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">/path/Tooth.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// ...etc</span>
+<span class="kd">class</span> <span class="nx">Dinosaur</span> <span class="kd">extends</span> <span class="nx">Tetrapod</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="c1">// *this.body is defined in some distant PARENT*</span>
+    <span class="c1">// *Use and change whats needed, make whats missing*</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">jaw</span> <span class="o">=</span> <span class="nx">fillTeeth</span><span class="p">(</span><span class="k">new</span> <span class="nx">Tooth</span><span class="p">(</span><span class="dl">'</span><span class="s1">scary</span><span class="dl">'</span><span class="p">));</span>
+    <span class="c1">// ...etc</span>
+  <span class="p">}</span>
+  <span class="c1">// *CHILD methods are defined here*</span>
+  <span class="kd">let</span> <span class="nx">scareParkGoer</span> <span class="o">=</span> <span class="p">(...)</span> <span class="o">=&gt;</span> <span class="p">{...}</span>
+  <span class="c1">// ...etc</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">fossilize</span><span class="p">(...)</span> <span class="p">{</span>
+  <span class="c1">// use distantly-inherited parent data</span>
+  <span class="kd">const</span> <span class="nx">fossil</span> <span class="o">=</span> <span class="nx">tryMakeFossil</span><span class="p">(</span><span class="nx">dinosaur</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nx">TestFromGod</span><span class="p">(</span><span class="nx">fossil</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// ...etc</span>
+</code></pre></div></div>
+
+<hr />
+<h2 id="seeing-the-forest-through-the-trees">Seeing the forest through the trees</h2>
+
+<p>When we can be <em>absolutely</em> sure of the existence of a rigid set of functionalities–a bare <em>minimum</em> of capabilities–we call them <strong>interfaces</strong>.</p>
+
+<p>Similarly, absolute surety of rigid sets of attributes–symmetrical sets of data–are called <strong>abstract classes</strong> and can also have related interfaces;</p>
+
+<p>Simply conforming with and reapplying these ideas, at every level and in every stage of development, should ideally <em>always</em> produce generically-composed <em>abstract</em> classes.</p>
+
+<p>Concretely defining them to take a specific <em>shape</em>, consequently shedding it’s generalities, can become a lot to manage when the many parts of it each themselves require their own specific shapes to be configured in uniquely different ways.</p>
+
+<p>Modeling various <em>breeds</em> of dogs–with distinct <em>shapes</em> though they remain the same <em>species</em>–could produce <em>nearly</em>-identical helper-methods for each distinctive breed’s <strong>shape</strong>, and might even be nearly-identical to other species of the same <em>genus</em>.</p>
+
+<p>The <strong>factory pattern</strong> can be applied to consolidate the different factory <em>methods</em>, or class constructors, into a single function or object that handles the creation of <em>all</em> the concretely-defined “descendants” of an abstract class based on either object characteristics, external conditions, or both.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// *Inheritance strongly-couples classes by-design*</span>
+<span class="kd">class</span> <span class="nx">MeasuringStick</span> <span class="kd">extends</span> <span class="nx">Stick</span> <span class="p">{...}</span>
+<span class="c1">// *the above class is still abstract*</span>
+
+<span class="c1">// An external condition</span>
+<span class="kd">var</span> <span class="nx">frameOfReference</span> <span class="o">=</span> <span class="p">...;</span>
+
+<span class="c1">// Factory-pattern method</span>
+<span class="c1">// *factory and abstract are strongly-coupled*</span>
+<span class="kd">function</span> <span class="nx">rulerFactory</span> <span class="p">(</span><span class="nx">rulerType</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
+  <span class="c1">// Concrete-Definitions: MeasuringStick-Types</span>
+  <span class="kd">const</span> <span class="nx">yardStickData</span> <span class="o">=</span> <span class="p">{...}</span>
+  <span class="c1">// ...etc</span>
+  <span class="c1">// *Where the rubber meets the road*</span>
+  <span class="kd">const</span> <span class="nx">measuringStick</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">rulerType</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">yard-stick</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// *build "descendent"*</span>
+    <span class="nx">measuringStick</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MeasuringStick</span><span class="p">(</span><span class="nx">yardStickData</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// ...etc</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nearSpeedOfLight</span><span class="p">(</span><span class="nx">measuringStickData</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// *mutate "descendent"*</span>
+    <span class="nx">specialRelativity</span><span class="p">(</span><span class="nx">frameOfReference</span><span class="p">,</span> <span class="nx">measuringStick</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">measuringStick</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// *Give it a way to identify _which_ type to make*</span>
+<span class="c1">// *and give it any more information it needs*</span>
+<span class="kd">const</span> <span class="nx">myYardStick</span> <span class="o">=</span> <span class="nx">rulerFactory</span><span class="p">(</span><span class="dl">'</span><span class="s1">yard-stick</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">0.9c</span><span class="dl">'</span><span class="p">,</span> <span class="p">...);</span>
+</code></pre></div></div>
+
+<p>Factory methods can be composed of other lower-level factory methods to further <em>delegate</em> the creation-processes of each of the complex-objects’ parts, once again applying <em>facade</em>.</p>
+
+<p>The factory pattern conforms to most of–if not all–the other patterns I’ve outlined and exemplifies a treasured occurrence that I’ve been consistently referring to, yet failing to define: a <em>design pattern</em>.</p>
+
+<hr />
+<h3 id="pattern-seeking">Pattern-seeking</h3>
+
+<p>As stated, a <strong>design pattern</strong> combines every relevant <em>best-practice</em>, or <strong><em>standardized principles maximizing efficiency and clarity</em></strong>, within itself and within it’s parts.</p>
+
+<p>It solidifies itself as a design <em>pattern</em> when many people, commonly through applying best-practices, come to the <em>same</em> shape or form–of an object or function–for the same <em>purpose</em>.</p>
+
+<p>In any effort to expand our vocabularies we often only search for the definition of a word when confronted with one we don’t understand, so not wanting to pour over dictionary-definitions of design patterns is understandable.</p>
+
+<p>Whether or not you personally adhere to my specific set of <em>principles</em> and apply the same <em>patterns</em> you can see how utilizing them–after being made aware of them–can minimize the amount of frustration and time spent in-development and can maximize efficiency and clarity of purpose <em>as a matter of course</em>.</p>
+
+<p>We all work in our own ways and modify our protocols to suit the context and our needs but some <em>wants</em> remain constant–the desire to understand, to be understood, and to understand <em>yourself</em>–and using these design patterns in programming is what helps <em>me</em>.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

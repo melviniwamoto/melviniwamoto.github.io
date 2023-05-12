@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The quest for the holy grail. | Melvin Iwamoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/melviniwamoto.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:url" content="https://melviniwamoto.github.io/essays/the-holy-grail.html">
+    <meta property="og:title" content="The quest for the holy grail. | Melvin Iwamoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/melviniwamoto.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>The quest for the holy grail. | Melvin Iwamoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Melvin Iwamoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">The quest for the holy grail.</h1>
+  <span class="date">02 May 2023</span>
+  <hr>
+  <p>For those of us not acquainted with Arthurian legend, the holy grail–according to <a href="https://www.merriam-webster.com/dictionary/Holy%20Grail">Merriam-Webster</a>–can be “an object or goal that is sought after for its great significance”.</p>
+
+<p>With respect to software engineering skills, the quest for the holy grail can be embodied in the pursuit to become a <em>full-stack</em> developer.</p>
+
+<p>A <strong>full-stack developer</strong> is one who is capable of producing both the <em>front-end</em> and <em>back-end</em> of an application.</p>
+
+<p>The <strong>front-end</strong> refers to that part of the app that the user would see and interact with, and is interchangeably referred to as the “client-side” in a website context.</p>
+
+<p>The <strong>back-end</strong> refers to the parts that the user doesn’t see, and is interchangeably referred to as the “server-side”.</p>
+
+<p>A developer can specialize in either, and it seems that many pursue at least a cursory understanding of both, but each person inevitably tends toward either one of them according to their strength or experience.</p>
+
+<h3 id="the-holy-grail">The holy grail</h3>
+<p><img width="30%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/full-stack-funny.jpg" alt="Drawing of a horse with a very simple front-end and a very detailed back-end " /></p>
+
+<p>The holy grail more resembles a utopian ideal in the context I framed for it–though it <em>is</em> possible to truly know both intimately–and can distort the reality into something comical, illustrated hilariously by this meme.</p>
+
+<p>In my opinion, though, the ability to have something simple at the front is preferable to leaving it blank, even if it is <em>wrong</em>, as long as it <em>works</em> to tentatively <em>complete</em> the picture.</p>
+
+<p>Therefor the quest goes on, and the following is my current understanding of the tools I’ve learned to use in this pursuit; the brushes and paint and canvas of our art through webpages.</p>
+
+<hr />
+<h2 id="framing-the-conversation">Framing the conversation</h2>
+<p>The function and purpose is significant when choosing a <strong>Language</strong> and <strong>Run-Time Environment (RTE)</strong> to write the program for.</p>
+
+<p>The RTE acts as the interpreter between your program and the different pieces of the hardware your program runs on or uses–like the hard-drive, processors, or screen–and have varying strengths and weaknesses.</p>
+
+<p>The environment I’ll be talking about here will be <a href="https://nodejs.org/"><strong>Node.js</strong></a>, and the Javascript language.</p>
+
+<p>Having an RTE is sufficient to create simple programs, especially when they don’t interact with a person, but it often is the case that we want that interaction and require a higher standard level of complexity.</p>
+
+<p>We can start off a little farther ahead, rather than creating everything <em>from scratch</em>, by using <em>frameworks</em>.</p>
+
+<p><strong>Frameworks</strong> are sets of pre-made tools and resources that serve as the backbone, or <em>frame</em>, of either the front or back end of an application.</p>
+
+<p>Frameworks come in <strong>Packages</strong> that we can include in Node.js by installing them directly from the internet through the <a href="https://www.npmjs.com/"><strong>Node Package Manager (NPM)</strong></a> as they’re needed.</p>
+
+<hr />
+<h3 id="choosing-the-right-tools-for-the-job">Choosing the right tools for the job</h3>
+<p>Frameworks are classified based on which part of the application it is relevant to; so there are <em>front-end</em> frameworks and <em>back-end</em> frameworks.</p>
+
+<h4 id="front-end-frameworks">Front-end frameworks</h4>
+
+<p>An example of a <strong>front-end framework</strong> is <a href="https://react.dev/"><strong>React</strong></a> which fully integrates normal javascript with HTML and CSS, which is somewhat more involved to accomplish otherwise, into objects called <strong><em>Components</em></strong>.</p>
+
+<p>Another example is <a href="https://getbootstrap.com/"><strong>Bootstrap</strong></a> which provides commonly used combinations of HTML and CSS for the layout and theming of webpages through easily referenced objects called <strong><em>Classes</em></strong>.</p>
+
+<h4 id="back-end-frameworks">Back-end Frameworks</h4>
+
+<p>An example of a <strong>back-end framework</strong> is <a href="https://www.mongodb.com/"><strong>MongoDB</strong></a> that implements the <strong>design pattern</strong>–the most efficient generic <em>shape</em> that a commonly desired functionality takes–of storage and security for data.</p>
+
+<p>The package allows a program to protect its data from users by segregating them from the <em>server</em> and forcing them to interact with <em>client</em> clones of the databases.</p>
+
+<h4 id="other-packages">Other packages</h4>
+
+<p>Some frameworks come as combinations of packages that are often used together, as for <a href="https://react-bootstrap.github.io/"><strong>React-Bootstrap</strong></a>.</p>
+
+<p>Packages can even <em>expand</em> frameworks, like the <a href="https://uniforms.tools/"><strong>Uniforms-bootstrap5</strong></a> package, which satisfies the common need of many React-Bootstrap apps to retrieve information from <strong><em>forms</em></strong>–the placed where users give input, like email and password for signing in–on webpages and ensuring that the data is valid.</p>
+
+<hr />
+<h2 id="their-powers-combined">Their powers combined</h2>
+<p>A third type of framework correlates to the combination of both the front and back ends and is intuitively referred to as a <strong>full-stack framework</strong>.</p>
+
+<p>A powerful example of this is called <a href="https://guide.meteor.com/"><strong>Meteor</strong></a> which combines MongoDB with different front-end frameworks, including React-Bootstrap through Node.js and NPM.</p>
+
+<h3 id="to-whom-it-may-concern">To whom it may concern</h3>
+<p>Whether when writing the same “Happy New Years, <em>Person-Y</em>!” or reprinting job resumes we see boilerplate all the time.</p>
+
+<p>The <em>boilerplate</em> is the repetitive parts of a document and are then naturally produced into a generic form that we can re-use called <strong>templates</strong>.</p>
+
+<p><img width="25%" class="rounded float-start pe-4" src="../img/reflect-on-software-engineering/funny-template.jpg" alt="A printed Dear-John letter" /></p>
+
+<p><strong>Templates</strong> for <a href="https://guide.meteor.com/react.html"><strong>Meteor-React</strong></a> include all of the necessary packages that it commonly takes to make those specific types of webpage-applications function.</p>
+
+<p>The ones I’ve been using included helpful working examples of databases and webpages with basic page navigation and user accounts already implemented.</p>
+
+<hr />
+<h2 id="forming-a-party-for-the-quest">Forming a party for the quest</h2>
+<p>The best part of having a full-stack framework is having a single <em>folder</em> to work in, especially for when a <em>team</em> of people are contributing to different or both “ends” of the program’s <em>files</em>.</p>
+
+<p>Common <em>access</em> to that folder is the obvious first problem but can be solved by storing the folder in a central accessible location, like <a href="https://github.com/">github</a>.</p>
+
+<p>Further easily-foreseeable problems can include a clear understanding of the tasks needed to be done to complete the <em>work</em>, and a common vision for the end <em>product</em>.</p>
+
+<p><strong>Issue-Driven Project Management</strong> solves this problem by having a central location for <em>planning</em>, separate from the actual content of the project, where team members create and manage a list of <em>issues</em>.</p>
+
+<p><strong>Issues</strong> are tasks–or groups of tasks–that take an approximately equal amount of time to complete, preferably 2-3 days, but can be adjusted to encompass more or less based on how much work it turns out to <em>actually</em> take to complete them.</p>
+
+<p>Projects can have groups of issues called <strong>Milestones</strong> which can represent certain phases of development like planning, implementing, and testing.</p>
+
+<hr />
+<h2 id="team-work-makes-the-dream-work">Team work makes the dream work</h2>
+<p>Our endeavor for the holy grail should ideally lead to an understanding of both ends of development as much as possible.</p>
+
+<p>The reality, however, is that it is much more efficient to work as a group with those whose strengths complement your own.</p>
+
+<p>In this way the quest for the holy grail can be brought to a success much sooner in the form of the collective.</p>
+
+<hr />
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

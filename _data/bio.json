@@ -1,0 +1,60 @@
+{
+  "basics": {
+    "name": "Melvin Iwamoto",
+    "label": "Part-Time Student",
+    "picture": "https://github.com/melviniwamoto.png",
+    "email": "melvinti@hawaii.edu",
+    "phone": "808-343-1116",
+    "website": "https://melviniwamoto.github.io",
+    "summary": "I am a part-time student studying for a B.S. in Computer Science from the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate around 2025.",
+    "location": { "address": "1126 f 19th ave", "postalCode": "96816", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "melviniwamoto", "url": "http://github.com/melviniwamoto" },
+      { "network": "linkedin", "username": "Melvin Iwamoto", "url": "https://www.linkedin.com/in/melvin-iwamoto-6a750ab8/" },
+      { "network": "email", "username": "melvinti@hawaii.edu" }
+    ]
+  },
+  "interests": [
+    { "name": "Computers" },
+    { "name": "Science" },
+    { "name": "Computer-Science" },
+    { "name": "Software-Development" },
+    { "name": "Engineering" },
+    { "name": "Astronomy" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Java", "Javascript", "HTML", "CSS", "Bootstrap", "React", "Meteor" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "UNIX", "LINUX", "Git/GitHub", "g++" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaiʻi, Honolulu, HI",
+      "area": "Computer Science (expected 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-01-01",
+      "endDate": "Present",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "University of Hawaiʻi Kapiʻolani Community College, Honolulu, HI",
+      "area": "Computer Science",
+      "studyType": "B.S.",
+      "startDate": "2019-09-01",
+      "endDate": "2020-12-31",
+      "courses": [
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
